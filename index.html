@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 <style>
-:root {
+:root{
   --bg:#f5f5f5;--surface:#fff;--surface-2:#f5f5f5;--surface-3:#ebebeb;
   --border:rgba(20,20,20,.09);--border-strong:rgba(20,20,20,.15);
   --text:#141414;--text-2:#6b6b6b;--text-3:#a4a4a4;--text-4:#bdbdbd;
@@ -43,7 +43,6 @@ button{cursor:pointer;font-family:inherit;border:none;background:none}
 input,select{font-family:inherit}
 a{text-decoration:none;color:inherit}
 
-/* HEADER */
 .hdr{position:sticky;top:0;z-index:50;height:56px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
 .hdr-l{display:flex;align-items:center;gap:10px}
 .logo{height:36px;width:auto;border-radius:var(--r-sm);object-fit:contain;flex-shrink:0}
@@ -51,7 +50,6 @@ a{text-decoration:none;color:inherit}
 .brand-sub{font-size:11px;font-weight:400;color:var(--text-3);letter-spacing:-.01em}
 .hdr-r{display:flex;align-items:center;gap:6px}
 
-/* BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:6px;font-family:var(--font);font-size:13px;font-weight:500;letter-spacing:-.02em;border-radius:var(--r-lg);padding:0 14px;height:36px;transition:all var(--t);white-space:nowrap;cursor:pointer;border:none}
 .btn-primary{background:var(--text);color:var(--surface);box-shadow:var(--sh-sm)}
 .btn-primary:hover{opacity:.85}
@@ -63,12 +61,10 @@ a{text-decoration:none;color:inherit}
 .btn-icon{width:36px;height:36px;padding:0;border-radius:var(--r-lg);display:inline-flex;align-items:center;justify-content:center;background:var(--surface);color:var(--text-2);border:1px solid var(--border);box-shadow:var(--sh-xs);transition:all var(--t)}
 .btn-icon:hover{background:var(--surface-2);color:var(--text);border-color:var(--border-strong)}
 
-/* LAYOUT */
 .main{padding:24px;max-width:1160px;width:100%;margin:0 auto}
 .pg-title{font-size:18px;font-weight:700;letter-spacing:-.035em;margin-bottom:4px}
 .pg-desc{font-size:13px;color:var(--text-3);letter-spacing:-.01em;margin-bottom:20px}
 
-/* STATS */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
 .stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:14px 16px;box-shadow:var(--sh-sm)}
 .stat-lbl{font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:6px}
@@ -77,11 +73,13 @@ a{text-decoration:none;color:inherit}
 .stat-ft{font-size:11px;color:var(--text-3);margin-top:4px}
 
 /* TEMPLATE */
-.tpl{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:14px 16px;margin-bottom:20px;box-shadow:var(--sh-sm)}
+.tpl{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:16px 18px;margin-bottom:20px;box-shadow:var(--sh-sm)}
 .tpl-lbl{font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:10px;display:flex;align-items:center;gap:6px}
 .tpl-body{font-size:13px;line-height:1.8;color:var(--text-2);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-lg);padding:12px 14px;letter-spacing:-.01em}
 .tpl-body strong{color:var(--text);font-weight:600}
-.tpl-note{font-size:11px;color:var(--text-3);margin-top:8px;letter-spacing:-.01em}
+.tpl-divider{height:1px;background:var(--border);margin:14px 0}
+.tpl-note{font-size:11px;color:var(--text-3);margin-top:8px;letter-spacing:-.01em;line-height:1.6}
+.tpl-note b{color:var(--text-2);font-weight:600}
 
 /* TOOLBAR */
 .toolbar{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
@@ -91,28 +89,23 @@ a{text-decoration:none;color:inherit}
 .search:focus{outline:none;border-color:var(--text);box-shadow:0 0 0 3px rgba(20,20,20,.08)}
 [data-theme="dark"] .search:focus{box-shadow:0 0 0 3px rgba(255,255,255,.08)}
 .search::placeholder{color:var(--text-3)}
-.filter-btn{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px;font-size:13px;font-weight:500;letter-spacing:-.02em;border-radius:var(--r-lg);background:var(--surface);color:var(--text-2);border:1px solid var(--border);box-shadow:var(--sh-xs);transition:all var(--t);white-space:nowrap;position:relative}
+.filter-btn{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px;font-size:13px;font-weight:500;letter-spacing:-.02em;border-radius:var(--r-lg);background:var(--surface);color:var(--text-2);border:1px solid var(--border);box-shadow:var(--sh-xs);transition:all var(--t);white-space:nowrap;position:relative;cursor:pointer}
 .filter-btn:hover{background:var(--surface-2);color:var(--text);border-color:var(--border-strong)}
 .filter-btn.active{background:var(--text);color:var(--surface);border-color:var(--text)}
-.filter-badge{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;font-size:10px;font-weight:700;background:var(--success);color:#fff;margin-left:2px}
-.filter-btn.active .filter-badge{background:rgba(255,255,255,.25);color:#fff}
+.filter-badge{display:inline-flex;align-items:center;justify-content:center;min-width:16px;height:16px;padding:0 4px;border-radius:8px;font-size:10px;font-weight:700;background:var(--success);color:#fff}
+.filter-btn.active .filter-badge{background:rgba(255,255,255,.25)}
 
 /* FILTER PANEL */
-.filter-panel{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--r-2xl);padding:18px 20px;
-  margin-bottom:14px;box-shadow:var(--sh-card);
-  display:none;
-}
+.filter-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-2xl);padding:18px 20px;margin-bottom:14px;box-shadow:var(--sh-card);display:none}
 .filter-panel.open{display:block;animation:panelIn .18s ease}
 @keyframes panelIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 .fp-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
 .fp-title{font-size:13px;font-weight:600;letter-spacing:-.02em}
 .fp-reset{font-size:12px;font-weight:500;color:var(--text-3);cursor:pointer;background:none;border:none;font-family:var(--font);letter-spacing:-.01em;transition:color var(--t)}
 .fp-reset:hover{color:var(--error)}
-.fp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
+.fp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px}
 .fp-group label{display:block;font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:7px}
-.fp-options{display:flex;flex-direction:column;gap:5px}
+.fp-options{display:flex;flex-direction:column;gap:4px}
 .fp-opt{display:flex;align-items:center;gap:8px;cursor:pointer;padding:6px 8px;border-radius:var(--r-md);border:1px solid transparent;transition:all var(--t);font-size:13px;letter-spacing:-.01em;font-weight:400;color:var(--text-2)}
 .fp-opt:hover{background:var(--surface-2);color:var(--text);border-color:var(--border)}
 .fp-opt.sel{background:color-mix(in srgb,var(--text) 8%,transparent);color:var(--text);border-color:var(--border-strong);font-weight:500}
@@ -130,10 +123,10 @@ th{padding:10px 14px;text-align:left;font-size:10px;font-weight:600;letter-spaci
 th.sortable{cursor:pointer;transition:color var(--t)}
 th.sortable:hover{color:var(--text-2)}
 th.sort-asc,th.sort-desc{color:var(--text)}
-.sort-arr{display:inline-block;margin-left:4px;font-size:10px;opacity:.6}
+.sort-arr{display:inline-block;margin-left:4px;font-size:10px}
 th.sort-asc .sort-arr::after{content:'↑'}
 th.sort-desc .sort-arr::after{content:'↓'}
-th:not(.sort-asc):not(.sort-desc) .sort-arr::after{content:'↕';opacity:.4}
+th:not(.sort-asc):not(.sort-desc) .sort-arr::after{content:'↕';opacity:.35}
 td{padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:middle}
 tbody tr:last-child td{border-bottom:none}
 tbody tr{transition:background var(--t)}
@@ -142,18 +135,16 @@ tbody tr.done{background:color-mix(in srgb,var(--success-bg) 60%,transparent)}
 tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transparent)}
 [data-theme="dark"] tbody tr.done{background:rgba(31,193,107,.05)}
 
-/* CELLS */
 .cell-no{width:36px;font-size:11px;font-weight:500;color:var(--text-3);text-align:center}
-.vname{font-weight:600;font-size:13px;letter-spacing:-.02em;transition:color var(--t)}
+.vname{font-weight:600;font-size:13px;letter-spacing:-.02em}
 .vname-lnk:hover{color:#e1306c}
 .vcontact{font-size:11px;color:var(--text-3);margin-top:1px;letter-spacing:-.01em}
 .price{font-size:12px;font-weight:500;color:var(--text-2);letter-spacing:-.01em}
 .price-na{font-size:11px;color:var(--text-3)}
 .ts{font-size:10px;color:var(--text-3);margin-top:2px}
-.maps-lnk{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:500;color:var(--info);letter-spacing:-.01em;transition:opacity var(--t)}
+.maps-lnk{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:500;color:var(--info);transition:opacity var(--t)}
 .maps-lnk:hover{opacity:.7}
 .loc-txt{font-size:12px;color:var(--text-2);letter-spacing:-.01em}
-
 .badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:var(--r-sm);font-size:11px;font-weight:500;letter-spacing:-.01em;white-space:nowrap}
 .b-done{background:var(--success-bg);color:var(--success);border:1px solid var(--success-border)}
 .b-pend{background:var(--surface-2);color:var(--text-3);border:1px solid var(--border)}
@@ -162,29 +153,10 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
 [data-theme="dark"] .b-bisa{background:rgba(59,130,246,.1);color:#60a5fa}
 [data-theme="dark"] .b-tidak{background:rgba(239,68,68,.1);color:#f87171}
 
-/* PIC SELECT / INPUT combo */
-.pic-wrap{position:relative;display:flex;gap:4px;align-items:center}
-.pic-sel{
-  height:28px;padding:0 24px 0 9px;min-width:100px;max-width:140px;
-  border:1px solid var(--border);border-radius:var(--r-md);
-  background:var(--bg);color:var(--text);
-  font-size:12px;font-weight:400;font-family:var(--font);letter-spacing:-.01em;
-  appearance:none;-webkit-appearance:none;
-  transition:border-color var(--t),box-shadow var(--t);cursor:pointer;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23a4a4a4' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 7px center;
-}
-.pic-sel:focus{outline:none;border-color:var(--text);box-shadow:0 0 0 2px rgba(20,20,20,.08)}
-.pic-sel:disabled{opacity:.35;cursor:not-allowed;background-color:var(--surface-2)}
-.pic-new{
-  height:28px;padding:0 9px;width:100px;
-  border:1px solid var(--border);border-radius:var(--r-md);
-  background:var(--bg);color:var(--text);
-  font-size:12px;font-family:var(--font);letter-spacing:-.01em;
-  transition:border-color var(--t),box-shadow var(--t);display:none;
-}
-.pic-new:focus{outline:none;border-color:var(--text);box-shadow:0 0 0 2px rgba(20,20,20,.08)}
-.pic-new.show{display:block}
+/* PIC INPUT (free text) */
+.pic-inp{height:28px;padding:0 9px;width:120px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--bg);color:var(--text);font-size:12px;font-family:var(--font);letter-spacing:-.01em;transition:border-color var(--t)}
+.pic-inp:focus{outline:none;border-color:var(--text)}
+.pic-inp:disabled{opacity:.35;cursor:not-allowed;background:var(--surface-2)}
 .pic-locked{font-size:12px;font-weight:500;color:var(--text-2);display:inline-flex;align-items:center;gap:5px;letter-spacing:-.01em}
 
 /* ACTION BUTTONS */
@@ -194,7 +166,7 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
 .btn-wa.dis{opacity:.3;pointer-events:none}
 [data-theme="dark"] .btn-wa{background:rgba(34,197,94,.1);color:#4ade80;border-color:rgba(34,197,94,.2)}
 [data-theme="dark"] .btn-wa:hover{background:rgba(34,197,94,.18)}
-.btn-ig{display:inline-flex;align-items:center;gap:3px;height:28px;padding:0 9px;border-radius:var(--r-md);background:transparent;color:#e1306c;font-family:var(--font);font-size:11px;font-weight:600;letter-spacing:-.01em;border:1px solid rgba(225,48,108,.2);transition:all var(--t)}
+.btn-ig{display:inline-flex;align-items:center;gap:3px;height:28px;padding:0 9px;border-radius:var(--r-md);background:transparent;color:#e1306c;font-size:11px;font-weight:600;letter-spacing:-.01em;border:1px solid rgba(225,48,108,.2);transition:all var(--t)}
 .btn-ig:hover{background:rgba(225,48,108,.06);border-color:rgba(225,48,108,.35)}
 .btn-mark{height:28px;padding:0 10px;border-radius:var(--r-md);font-family:var(--font);font-size:11px;font-weight:600;letter-spacing:-.01em;border:1px solid var(--border);background:var(--surface);color:var(--text-2);box-shadow:var(--sh-xs);transition:all var(--t);white-space:nowrap}
 .btn-mark:hover:not(:disabled){background:var(--success-bg);color:var(--success);border-color:var(--success-border)}
@@ -202,7 +174,7 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
 
 /* MOBILE CARDS */
 .cards{display:none;flex-direction:column;gap:10px}
-.vcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-2xl);padding:16px;box-shadow:var(--sh-card);transition:box-shadow var(--t)}
+.vcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-2xl);padding:16px;box-shadow:var(--sh-card)}
 .vcard.done{background:color-mix(in srgb,var(--success-bg) 40%,var(--surface))}
 [data-theme="dark"] .vcard.done{background:rgba(31,193,107,.04)}
 .vc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:12px}
@@ -213,19 +185,13 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
 .pb-lbl{font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);margin-bottom:3px}
 .pb-val{font-size:13px;font-weight:600;color:var(--text-2);letter-spacing:-.02em}
 .vc-pic-lbl{font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:5px}
-/* card pic select */
-.pic-sel-full{width:100%;height:38px;padding:0 32px 0 12px;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--bg);color:var(--text);font-size:13px;font-family:var(--font);letter-spacing:-.01em;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a4a4a4' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;transition:border-color var(--t),box-shadow var(--t);cursor:pointer}
-.pic-sel-full:focus{outline:none;border-color:var(--text);box-shadow:0 0 0 3px rgba(20,20,20,.08)}
-.pic-sel-full:disabled{opacity:.35;cursor:not-allowed;background-color:var(--surface-2)}
-.pic-new-full{width:100%;height:38px;padding:0 12px;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--bg);color:var(--text);font-size:13px;font-family:var(--font);letter-spacing:-.01em;transition:border-color var(--t),box-shadow var(--t);display:none}
-.pic-new-full:focus{outline:none;border-color:var(--text);box-shadow:0 0 0 3px rgba(20,20,20,.08)}
-.pic-new-full.show{display:block}
+.pic-inp-full{width:100%;height:38px;padding:0 12px;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--bg);color:var(--text);font-size:13px;font-family:var(--font);letter-spacing:-.01em;transition:border-color var(--t)}
+.pic-inp-full:focus{outline:none;border-color:var(--text);box-shadow:0 0 0 3px rgba(20,20,20,.08)}
+.pic-inp-full:disabled{opacity:.35;cursor:not-allowed;background:var(--surface-2)}
 .vc-acts{display:flex;gap:7px;margin-top:12px;flex-wrap:wrap}
-.vc-acts .btn-wa,.vc-acts .btn-mark{flex:1;height:38px;font-size:13px;justify-content:center;min-width:0;border-radius:var(--r-lg)}
-.vc-acts .btn-ig{height:38px;font-size:12px;padding:0 12px;border-radius:var(--r-lg)}
 .vc-ts{font-size:11px;color:var(--text-3);margin-top:10px;text-align:center;letter-spacing:-.01em}
 
-/* EMPTY / LOADING */
+/* EMPTY/LOAD */
 .state{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 24px;gap:10px;color:var(--text-3)}
 .state-title{font-size:14px;font-weight:600;color:var(--text-2);letter-spacing:-.02em}
 .state p{font-size:13px;text-align:center;max-width:260px;letter-spacing:-.01em}
@@ -258,13 +224,11 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
 .modal-title{font-size:16px;font-weight:700;letter-spacing:-.03em;margin-bottom:4px}
 .modal-desc{font-size:13px;color:var(--text-2);margin-bottom:18px;line-height:1.65;letter-spacing:-.01em}
 .modal-lbl{display:block;font-size:12px;font-weight:500;color:var(--text-2);margin-bottom:5px;letter-spacing:-.01em}
-.modal-inp{width:100%;height:40px;padding:0 12px;border:1px solid var(--border-strong);border-radius:var(--r-lg);background:var(--surface-2);color:var(--text);font-size:13px;font-family:var(--font);letter-spacing:-.01em;transition:border-color var(--t),box-shadow var(--t)}
+.modal-inp{width:100%;height:40px;padding:0 12px;border:1px solid var(--border-strong);border-radius:var(--r-lg);background:var(--surface-2);color:var(--text);font-size:13px;font-family:var(--font);letter-spacing:-.01em;transition:border-color var(--t)}
 .modal-inp:focus{outline:none;border-color:var(--text);box-shadow:0 0 0 3px rgba(20,20,20,.08)}
 .modal-inp::placeholder{color:var(--text-3)}
-.modal-hint{font-size:11px;color:var(--text-3);margin-top:6px;letter-spacing:-.01em}
 .modal-acts{display:flex;gap:7px;justify-content:flex-end;margin-top:20px}
 
-/* RESPONSIVE */
 @media(max-width:768px){
   .hdr{padding:0 16px;height:52px}
   .main{padding:16px}
@@ -282,7 +246,6 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
 @media(max-width:480px){
   .stats{grid-template-columns:1fr 1fr}
   .stats .stat:nth-child(3){grid-column:span 2}
-  .stat-val{font-size:22px}
   .fp-grid{grid-template-columns:1fr}
 }
 </style>
@@ -335,8 +298,15 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
       <svg width="13" height="13" viewBox="0 0 24 24" fill="#22c55e"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 0C5.365 0 0 5.364 0 11.988c0 2.123.558 4.12 1.532 5.851L.06 23.765a.5.5 0 0 0 .613.634l6.107-1.61A11.947 11.947 0 0 0 11.99 24C18.617 24 24 18.636 24 12.012 24 5.364 18.617 0 11.99 0zm0 21.818a9.836 9.836 0 0 1-5.022-1.369l-.36-.214-3.728.982.997-3.645-.234-.374A9.818 9.818 0 0 1 2.182 12c0-5.412 4.398-9.818 9.808-9.818 5.412 0 9.829 4.406 9.829 9.818 0 5.414-4.417 9.818-9.829 9.818z"/></svg>
       Template Pesan WA ke Vendor
     </div>
-    <div class="tpl-body">"Halo perkenalkan saya <strong>[Nama PIC]</strong> dari tim SISA NAFAS FC (@sisanafas.fc). Mau menanyakan terkait pembuatan custom jersey. Boleh minta pricelist terbaru nya? Terimakasih"</div>
-    <div class="tpl-note">Nama PIC dipilih dari dropdown — otomatis masuk ke pesan saat tombol WA diklik.</div>
+
+    <div style="font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text-3);margin-bottom:6px">① Pembuka — Minta Pricelist</div>
+    <div class="tpl-body">"Halo, perkenalkan saya <strong>[Nama PIC]</strong> dari tim SISA NAFAS FC (@sisanafas.fc). Kami sedang mencari vendor untuk pembuatan custom jersey tim. Boleh minta pricelist terbarunya? Terima kasih 🙏"</div>
+
+    <div class="tpl-divider"></div>
+
+    <div style="font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text-3);margin-bottom:6px">② Lanjutan — Tanya Pecah Pola</div>
+    <div class="tpl-body" style="margin-bottom:8px">"Kak, setelah kami cek pricelitnya — kalau untuk desain jersey kami menggunakan pola custom sendiri (bukan template yang sudah tersedia), apakah bisa? Ada biaya tambahan untuk pecah pola / pola custom-nya kah? 🙏"</div>
+    <div class="tpl-note">💡 <b>Catatan:</b> Template ② ditanyakan setelah dapat balasan pricelist dari vendor, terutama jika di pricelist tidak ada info biaya tambahan untuk pecah pola atau pola custom.</div>
   </div>
 
   <div class="toolbar">
@@ -351,21 +321,18 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
     </button>
   </div>
 
-  <!-- FILTER PANEL -->
   <div class="filter-panel" id="filterPanel">
     <div class="fp-header">
       <span class="fp-title">Filter Tabel</span>
       <button class="fp-reset" onclick="resetFilters()">Reset semua</button>
     </div>
-    <div class="fp-grid" id="fpGrid">
-      <!-- generated by JS -->
-    </div>
+    <div class="fp-grid" id="fpGrid"></div>
   </div>
 
   <div class="tbl-card">
     <div class="tbl-scroll">
       <table>
-        <thead><tr id="thead">
+        <thead><tr>
           <th class="cell-no">#</th>
           <th class="sortable" data-col="Nama Apparel" onclick="sortBy(this)">Nama Apparel <span class="sort-arr"></span></th>
           <th class="sortable" data-col="Lokasi" onclick="sortBy(this)">Lokasi <span class="sort-arr"></span></th>
@@ -395,7 +362,7 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
     <p class="modal-desc">Paste URL dari Google Apps Script Web App untuk membaca dan menyimpan data ke Google Sheets.</p>
     <label class="modal-lbl" for="apiIn">Apps Script URL</label>
     <input class="modal-inp" id="apiIn" type="url" placeholder="https://script.google.com/macros/s/.../exec">
-    <p class="modal-hint">URL disimpan di browser kamu saja (localStorage) — tidak dikirim ke server manapun.</p>
+    <p style="font-size:11px;color:var(--text-3);margin-top:6px;letter-spacing:-.01em">URL disimpan di browser kamu saja — tidak dikirim ke server manapun.</p>
     <div class="modal-acts">
       <button class="btn btn-ghost" onclick="closeModal()">Batal</button>
       <button class="btn btn-primary" onclick="saveUrl()">Simpan & Refresh</button>
@@ -406,7 +373,7 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
 <div class="toasts" id="toasts"></div>
 
 <script>
-const WATEXT = p => `Halo perkenalkan saya ${p} dari tim SISA NAFAS FC (@sisanafas.fc). Mau menanyakan terkait pembuatan custom jersey. Boleh minta pricelist terbaru nya? Terimakasih`;
+const WATEXT1 = p => `Halo, perkenalkan saya ${p} dari tim SISA NAFAS FC (@sisanafas.fc). Kami sedang mencari vendor untuk pembuatan custom jersey tim. Boleh minta pricelist terbarunya? Terima kasih 🙏`;
 const WAICO = `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 0C5.365 0 0 5.364 0 11.988c0 2.123.558 4.12 1.532 5.851L.06 23.765a.5.5 0 0 0 .613.634l6.107-1.61A11.947 11.947 0 0 0 11.99 24C18.617 24 24 18.636 24 12.012 24 5.364 18.617 0 11.99 0zm0 21.818a9.836 9.836 0 0 1-5.022-1.369l-.36-.214-3.728.982.997-3.645-.234-.374A9.818 9.818 0 0 1 2.182 12c0-5.412 4.398-9.818 9.808-9.818 5.412 0 9.829 4.406 9.829 9.818 0 5.414-4.417 9.818-9.829 9.818z"/></svg>`;
 const IGICO = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`;
 const MAPICO = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
@@ -414,38 +381,37 @@ const LOCKICO = `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" str
 const CHKICO = `<svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>`;
 
 let rows = [], sortCol = null, sortDir = 1;
-// filters: object of colKey -> Set of selected values
 let activeFilters = {};
-// pic history: persisted to localStorage
-let picHistory = JSON.parse(localStorage.getItem('snfc_pics') || '[]');
+
+// PIC names from marked-done rows (persisted)
+let picDoneNames = JSON.parse(localStorage.getItem('snfc_pic_done') || '[]');
 
 const getUrl = () => localStorage.getItem('snfc_api') || '';
 const setUrl = u => localStorage.setItem('snfc_api', u);
-const isDone = r => String(r.Status || '').toLowerCase() === 'sudah chat';
+const isDone = r => String(r.Status || '').toLowerCase().includes('sudah');
 const phone = r => String(r['Kontak'] || '').replace(/[^0-9]/g, '');
-const waHref = (r, p) => `https://wa.me/${phone(r)}?text=${encodeURIComponent(WATEXT(p))}`;
+const waHref = (r, p) => `https://wa.me/${phone(r)}?text=${encodeURIComponent(WATEXT1(p))}`;
 
-// ── MODAL ──
-function openModal() { document.getElementById('apiIn').value = getUrl(); document.getElementById('ov').classList.add('open'); setTimeout(() => document.getElementById('apiIn').focus(), 180); }
+function openModal() { document.getElementById('apiIn').value = getUrl(); document.getElementById('ov').classList.add('open'); setTimeout(()=>document.getElementById('apiIn').focus(),180); }
 function closeModal() { document.getElementById('ov').classList.remove('open'); }
 function saveUrl() { setUrl(document.getElementById('apiIn').value.trim()); closeModal(); loadData(); }
 
-// ── LOAD DATA ──
 async function loadData() {
   const u = getUrl();
-  if (!u) { document.getElementById('banner').style.display = 'flex'; setEmpty('Belum ada URL API. Klik Setup API untuk mulai.'); updateStats([]); return; }
-  document.getElementById('banner').style.display = 'none';
+  if (!u) { document.getElementById('banner').style.display='flex'; setEmpty('Belum ada URL API. Klik Setup API untuk mulai.'); updateStats([]); return; }
+  document.getElementById('banner').style.display='none';
   setLoad();
   try {
     const res = await fetch(u);
     const json = await res.json();
-    if (!json.ok) throw new Error(json.error || 'Response tidak valid');
+    if (!json.ok) throw new Error(json.error||'Response tidak valid');
     rows = json.data || [];
+    // sync pic names from data that's already done
+    rows.filter(isDone).forEach(r => addPicDone(r['PIC']||''));
     buildFilterPanel();
-    rerender();
-    updateStats(rows);
+    rerender(); updateStats(rows);
     toast('Data berhasil dimuat ✓');
-  } catch (e) { setEmpty('Gagal: ' + e.message, true); updateStats([]); }
+  } catch(e) { setEmpty('Gagal: '+e.message, true); updateStats([]); }
 }
 
 function setLoad() {
@@ -453,308 +419,243 @@ function setLoad() {
   document.getElementById('cards').innerHTML = `<div class="state" style="padding:40px 0"><div class="spinner"></div><span class="state-title">Memuat…</span></div>`;
 }
 function setEmpty(msg, err) {
-  document.getElementById('tbody').innerHTML = `<tr><td colspan="9"><div class="state"><span class="state-title">${err ? 'Gagal memuat' : 'Belum ada data'}</span><p>${msg}</p>${err ? `<button class="btn btn-stroke btn-sm" onclick="loadData()">Coba lagi</button>` : ''}</div></td></tr>`;
+  document.getElementById('tbody').innerHTML = `<tr><td colspan="9"><div class="state"><span class="state-title">${err?'Gagal memuat':'Belum ada data'}</span><p>${msg}</p>${err?`<button class="btn btn-stroke btn-sm" onclick="loadData()">Coba lagi</button>`:''}</div></td></tr>`;
   document.getElementById('cards').innerHTML = `<div class="state" style="padding:40px 0"><span class="state-title">${msg}</span></div>`;
 }
 function updateStats(d) {
-  const t = d.length, dn = d.filter(isDone).length;
-  document.getElementById('sTotal').textContent = t || '—';
-  document.getElementById('sDone').textContent = t ? dn : '—';
-  document.getElementById('sPend').textContent = t ? (t - dn) : '—';
+  const t=d.length, dn=d.filter(isDone).length;
+  document.getElementById('sTotal').textContent=t||'—';
+  document.getElementById('sDone').textContent=t?dn:'—';
+  document.getElementById('sPend').textContent=t?(t-dn):'—';
+}
+
+function addPicDone(name) {
+  const n = name.trim();
+  if (!n || picDoneNames.includes(n)) return;
+  picDoneNames.push(n);
+  localStorage.setItem('snfc_pic_done', JSON.stringify(picDoneNames));
 }
 
 // ── FILTER PANEL ──
-const FILTER_COLS = [
-  { key: 'Status', label: 'Status' },
-  { key: 'Pecah Pola', label: 'Pecah Pola' },
-  { key: 'Lokasi', label: 'Lokasi' },
+// Columns to show in filter — all table columns except free-text PIC input & Kontak
+// PIC filter uses picDoneNames (dropdown); others use unique values from data
+const FILTER_DEFS = [
+  { key: 'Status',         label: 'Status' },
+  { key: 'Pecah Pola',     label: 'Pecah Pola' },
+  { key: 'Nama Apparel',   label: 'Nama Apparel' },
+  { key: 'Lokasi',         label: 'Lokasi' },
+  { key: 'Harga Full Print', label: 'Harga Full Print' },
+  { key: 'Harga Spec+',    label: 'Harga Spec+' },
+  { key: '__PIC__',        label: 'Nama PIC' },
 ];
 
 function buildFilterPanel() {
   const grid = document.getElementById('fpGrid');
-  grid.innerHTML = FILTER_COLS.map(fc => {
-    const vals = [...new Set(rows.map(r => String(r[fc.key] || '').trim()).filter(Boolean))].sort();
+  grid.innerHTML = FILTER_DEFS.map(fc => {
+    let vals;
+    if (fc.key === '__PIC__') {
+      vals = [...picDoneNames].sort();
+    } else {
+      vals = [...new Set(rows.map(r => String(r[fc.key]||'').trim()).filter(Boolean))].sort();
+    }
     if (!vals.length) return '';
     return `<div class="fp-group">
       <label>${fc.label}</label>
       <div class="fp-options">
-        ${vals.map(v => `
-          <div class="fp-opt" data-col="${fc.key}" data-val="${v}" onclick="toggleFilter(this)">
+        ${vals.map(v=>`
+          <div class="fp-opt" data-col="${fc.key}" data-val="${v.replace(/"/g,'&quot;')}" onclick="toggleFilter(this)">
             <div class="fp-chk">${CHKICO}</div>
             ${v}
           </div>`).join('')}
       </div>
     </div>`;
   }).join('');
+  // re-apply sel state
+  Object.entries(activeFilters).forEach(([col, vals])=>{
+    vals.forEach(v=>{
+      const el = grid.querySelector(`[data-col="${col}"][data-val="${v.replace(/"/g,'&quot;')}"]`);
+      if(el) el.classList.add('sel');
+    });
+  });
 }
 
 function togglePanel() {
   const panel = document.getElementById('filterPanel');
   const btn = document.getElementById('filterBtn');
   const isOpen = panel.classList.toggle('open');
-  btn.classList.toggle('active', isOpen);
+  btn.classList.toggle('active', isOpen || countFilters()>0);
 }
+function countFilters() { return Object.values(activeFilters).reduce((a,s)=>a+s.size,0); }
 
 function toggleFilter(el) {
-  const col = el.dataset.col, val = el.dataset.val;
-  if (!activeFilters[col]) activeFilters[col] = new Set();
+  const col=el.dataset.col, val=el.dataset.val;
+  if (!activeFilters[col]) activeFilters[col]=new Set();
   if (activeFilters[col].has(val)) { activeFilters[col].delete(val); el.classList.remove('sel'); }
   else { activeFilters[col].add(val); el.classList.add('sel'); }
-  if (activeFilters[col].size === 0) delete activeFilters[col];
-  updateFilterBadge();
-  rerender();
+  if (!activeFilters[col].size) delete activeFilters[col];
+  updateFilterBadge(); rerender();
 }
-
 function resetFilters() {
-  activeFilters = {};
-  document.querySelectorAll('.fp-opt.sel').forEach(el => el.classList.remove('sel'));
-  updateFilterBadge();
-  rerender();
+  activeFilters={};
+  document.querySelectorAll('.fp-opt.sel').forEach(el=>el.classList.remove('sel'));
+  updateFilterBadge(); rerender();
 }
-
 function updateFilterBadge() {
-  const total = Object.values(activeFilters).reduce((a, s) => a + s.size, 0);
-  const badge = document.getElementById('filterBadge');
-  const btn = document.getElementById('filterBtn');
-  badge.style.display = total ? 'inline-flex' : 'none';
-  badge.textContent = total;
-  // keep active style if panel is open OR filters active
-  if (!document.getElementById('filterPanel').classList.contains('open')) {
-    btn.classList.toggle('active', total > 0);
-  }
+  const n=countFilters();
+  const badge=document.getElementById('filterBadge');
+  badge.style.display=n?'inline-flex':'none';
+  badge.textContent=n;
+  const panelOpen=document.getElementById('filterPanel').classList.contains('open');
+  document.getElementById('filterBtn').classList.toggle('active', panelOpen||n>0);
 }
 
 // ── SORT ──
 function sortBy(th) {
-  const col = th.dataset.col;
-  if (sortCol === col) sortDir = -sortDir;
-  else { sortCol = col; sortDir = 1; }
-  document.querySelectorAll('th.sortable').forEach(t => { t.classList.remove('sort-asc', 'sort-desc'); });
-  th.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+  const col=th.dataset.col;
+  if(sortCol===col) sortDir=-sortDir; else {sortCol=col;sortDir=1;}
+  document.querySelectorAll('th.sortable').forEach(t=>t.classList.remove('sort-asc','sort-desc'));
+  th.classList.add(sortDir===1?'sort-asc':'sort-desc');
   rerender();
 }
 
 function getFiltered() {
-  const q = (document.getElementById('q').value || '').toLowerCase();
-  let result = rows.filter(r => {
-    // Search
-    const ms = !q || String(r['Nama Apparel'] || '').toLowerCase().includes(q) || String(r['Lokasi'] || '').toLowerCase().includes(q);
-    if (!ms) return false;
-    // Active filters
-    for (const [col, vals] of Object.entries(activeFilters)) {
-      const rv = String(r[col] || '').trim();
-      if (!vals.has(rv)) return false;
+  const q=(document.getElementById('q').value||'').toLowerCase();
+  let result=rows.filter(r=>{
+    if(q && !String(r['Nama Apparel']||'').toLowerCase().includes(q) && !String(r['Lokasi']||'').toLowerCase().includes(q)) return false;
+    for(const [col,vals] of Object.entries(activeFilters)){
+      const rv = col==='__PIC__' ? String(r['PIC']||'').trim() : String(r[col]||'').trim();
+      if(!vals.has(rv)) return false;
     }
     return true;
   });
-  if (sortCol) {
-    result = [...result].sort((a, b) => {
-      const av = String(a[sortCol] || ''), bv = String(b[sortCol] || '');
-      return av.localeCompare(bv, 'id') * sortDir;
-    });
-  }
+  if(sortCol) result=[...result].sort((a,b)=>String(a[sortCol]||'').localeCompare(String(b[sortCol]||''),'id')*sortDir);
   return result;
 }
 
-// ── PIC HISTORY ──
-function savePic(name) {
-  const n = name.trim();
-  if (!n || picHistory.includes(n)) return;
-  picHistory.push(n);
-  localStorage.setItem('snfc_pics', JSON.stringify(picHistory));
-}
-
-function picOptionsHTML(selectedVal) {
-  const NEW_OPT = `<option value="__new__">+ Ketik nama baru…</option>`;
-  const opts = picHistory.map(p => `<option value="${p}"${p === selectedVal ? ' selected' : ''}>${p}</option>`).join('');
-  const empty = `<option value="" disabled${selectedVal ? '' : ' selected'}>Pilih PIC…</option>`;
-  return empty + opts + NEW_OPT;
-}
-
-function onPicChange(sel) {
-  const row = +sel.dataset.row;
-  if (sel.value === '__new__') {
-    const inp = sel.closest('.pic-wrap') ? sel.closest('.pic-wrap').querySelector('.pic-new') : sel.parentElement.querySelector('.pic-new-full');
-    if (inp) { inp.classList.add('show'); inp.focus(); sel.value = ''; }
-    return;
-  }
-  updateWaBtn(row, sel.value);
-  const mk = document.querySelector(`[data-mark="${row}"]`);
-  if (mk) mk.disabled = !sel.value.trim();
-}
-
-function onPicNew(inp) {
-  const row = +inp.dataset.row;
-  updateWaBtn(row, inp.value);
-  const mk = document.querySelector(`[data-mark="${row}"]`);
-  if (mk) mk.disabled = !inp.value.trim();
-}
-
-function getPicVal(row) {
-  const sel = document.querySelector(`[data-picsel="${row}"]`);
-  if (sel && sel.value && sel.value !== '__new__') return sel.value.trim();
-  const inp = document.querySelector(`[data-picnew="${row}"]`);
-  if (inp && inp.value.trim()) return inp.value.trim();
-  return '';
-}
-
-function updateWaBtn(row, val) {
-  const rd = rows.find(r => r._row === row);
-  const wa = document.querySelector(`[data-wa="${row}"]`);
-  if (!wa || !rd) return;
-  if (val && val.trim()) {
-    wa.href = waHref(rd, val.trim());
-    wa.classList.remove('dis');
-  } else {
-    wa.href = '#';
-    wa.classList.add('dis');
-  }
-}
-
-// ── RENDER HELPERS ──
+// ── RENDER ──
 function lokasiHTML(r) {
-  const nm = r['Lokasi'] || '—';
-  const lk = r['Link Maps'] || r['link maps'] || r['LinkMaps'] || '';
-  return lk ? `<a class="maps-lnk" href="${lk}" target="_blank" rel="noopener">${MAPICO} ${nm}</a>` : `<span class="loc-txt">${nm}</span>`;
-}
-function nameHTML(r, cls = 'vname') {
-  const nm = r['Nama Apparel'] || '—';
-  const ig = r['Instagram'] || r['instagram'] || r['Link Instagram'] || '';
-  return ig ? `<a class="${cls} vname-lnk" href="${ig}" target="_blank" rel="noopener">${nm}</a>` : `<span class="${cls}">${nm}</span>`;
+  const nm=r['Lokasi']||'—', lk=r['Link Maps']||r['link maps']||r['LinkMaps']||'';
+  return lk?`<a class="maps-lnk" href="${lk}" target="_blank" rel="noopener">${MAPICO} ${nm}</a>`:`<span class="loc-txt">${nm}</span>`;
 }
 function ppolaHTML(r) {
-  const v = String(r['Pecah Pola'] || '').trim();
-  if (!v || v === '-') return `<span class="price-na">—</span>`;
-  const l = v.toLowerCase();
-  if (l === 'bisa') return `<span class="badge b-bisa">✓ Bisa</span>`;
-  if (l.includes('tidak')) return `<span class="badge b-tidak">✗ Tidak</span>`;
+  const v=String(r['Pecah Pola']||'').trim();
+  if(!v||v==='-') return `<span class="price-na">—</span>`;
+  const l=v.toLowerCase();
+  if(l==='bisa') return `<span class="badge b-bisa">✓ Bisa</span>`;
+  if(l.includes('tidak')) return `<span class="badge b-tidak">✗ Tidak</span>`;
   return `<span class="loc-txt">${v}</span>`;
 }
+function getPicInp(row) {
+  const el=document.querySelector(`[data-picinp="${row}"]`); return el?el.value.trim():'';
+}
 
-// ── RENDER TABLE ──
 function rerender() { renderTable(); renderCards(); }
 
 function renderTable() {
-  const fd = getFiltered(), tb = document.getElementById('tbody');
-  if (!fd.length) { tb.innerHTML = `<tr><td colspan="9"><div class="state"><span class="state-title">Tidak ada hasil</span><p>Coba ubah filter atau kata kunci</p></div></td></tr>`; return; }
-  tb.innerHTML = fd.map((r, i) => {
-    const dn = isDone(r);
-    const p = r['PIC'] || '';
-    const ig = r['Instagram'] || r['instagram'] || r['Link Instagram'] || '';
-    const hfp = r['Harga Full Print'] ? `<span class="price">${r['Harga Full Print']}</span>` : `<span class="price-na">—</span>`;
-    const hsp = r['Harga Spec+'] ? `<span class="price">${r['Harga Spec+']}</span>` : `<span class="price-na">—</span>`;
-    const ts = r['Waktu Chat'] ? `<div class="ts">${r['Waktu Chat']}</div>` : '';
-    const picCell = dn
-      ? `<div class="pic-locked">${LOCKICO} ${p}</div>`
-      : `<div class="pic-wrap">
-          <select class="pic-sel" data-row="${r._row}" data-picsel="${r._row}" onchange="onPicChange(this)">${picOptionsHTML(p)}</select>
-          <input class="pic-new" type="text" placeholder="Nama baru…" data-row="${r._row}" data-picnew="${r._row}" oninput="onPicNew(this)">
-        </div>`;
-    const initPic = p.trim();
-    const igBtn = ig ? `<a class="btn-ig" href="${ig}" target="_blank" rel="noopener">${IGICO}</a>` : '';
-    const waDis = (!initPic && !dn) ? 'dis' : '';
-    return `<tr class="${dn ? 'done' : ''}" data-row="${r._row}">
-      <td class="cell-no">${r['No'] || (i + 1)}</td>
-      <td>${nameHTML(r)}<div class="vcontact">${phone(r)}</div></td>
+  const fd=getFiltered(), tb=document.getElementById('tbody');
+  if(!fd.length) { tb.innerHTML=`<tr><td colspan="9"><div class="state"><span class="state-title">Tidak ada hasil</span><p>Coba ubah filter atau kata kunci</p></div></td></tr>`; return; }
+  tb.innerHTML=fd.map((r,i)=>{
+    const dn=isDone(r), p=r['PIC']||'', ig=r['Instagram']||r['instagram']||r['Link Instagram']||'';
+    const hfp=r['Harga Full Print']?`<span class="price">${r['Harga Full Print']}</span>`:`<span class="price-na">—</span>`;
+    const hsp=r['Harga Spec+']?`<span class="price">${r['Harga Spec+']}</span>`:`<span class="price-na">—</span>`;
+    const ts=r['Waktu Chat']?`<div class="ts">${r['Waktu Chat']}</div>`:'';
+    const nm=ig?`<a class="vname vname-lnk" href="${ig}" target="_blank" rel="noopener">${r['Nama Apparel']||'—'}</a>`:`<span class="vname">${r['Nama Apparel']||'—'}</span>`;
+    const picCell=dn?`<div class="pic-locked">${LOCKICO} ${p}</div>`
+      :`<input class="pic-inp" type="text" placeholder="Nama PIC…" value="${p}" data-row="${r._row}" data-picinp="${r._row}" oninput="onPicInp(this)">`;
+    const waDis=(!p&&!dn)?'dis':'';
+    return `<tr class="${dn?'done':''}" data-row="${r._row}">
+      <td class="cell-no">${r['No']||(i+1)}</td>
+      <td>${nm}<div class="vcontact">${phone(r)}</div></td>
       <td>${lokasiHTML(r)}</td>
       <td>${hfp}</td><td>${hsp}</td>
       <td>${ppolaHTML(r)}</td>
-      <td><span class="badge ${dn ? 'b-done' : 'b-pend'}">${dn ? '✓ Sudah' : 'Belum'}</span>${ts}</td>
+      <td><span class="badge ${dn?'b-done':'b-pend'}">${dn?'✓ Sudah':'Belum'}</span>${ts}</td>
       <td>${picCell}</td>
       <td><div class="acts">
-        <a class="btn-wa ${waDis}" data-wa="${r._row}" href="${initPic || dn ? waHref(r, initPic || p) : '#'}" target="_blank" rel="noopener">${WAICO} WA</a>
-        ${igBtn}
-        ${dn ? `<button class="btn-mark" disabled>✓</button>` : `<button class="btn-mark" data-mark="${r._row}" data-row="${r._row}" onclick="markDone(this)"${!initPic ? ' disabled' : ''}>Tandai</button>`}
+        <a class="btn-wa ${waDis}" data-wa="${r._row}" href="${p||dn?waHref(r,p):'#'}" target="_blank" rel="noopener">${WAICO} WA</a>
+        ${ig?`<a class="btn-ig" href="${ig}" target="_blank" rel="noopener">${IGICO}</a>`:''}
+        ${dn?`<button class="btn-mark" disabled>✓</button>`:`<button class="btn-mark" data-mark="${r._row}" data-row="${r._row}" onclick="markDone(this)"${!p?' disabled':''}>Tandai</button>`}
       </div></td>
     </tr>`;
   }).join('');
 }
 
-// ── RENDER CARDS ──
 function renderCards() {
-  const fd = getFiltered(), cl = document.getElementById('cards');
-  if (!fd.length) { cl.innerHTML = `<div class="state" style="padding:40px 0"><span class="state-title">Tidak ada hasil</span></div>`; return; }
-  cl.innerHTML = fd.map((r, i) => {
-    const dn = isDone(r);
-    const p = r['PIC'] || '';
-    const ig = r['Instagram'] || r['instagram'] || r['Link Instagram'] || '';
-    const hfp = r['Harga Full Print'] || '—', hsp = r['Harga Spec+'] || '—';
-    const pp = ppolaHTML(r);
-    const ts = r['Waktu Chat'] ? `<div class="vc-ts">Dichat: ${r['Waktu Chat']}</div>` : '';
-    const initPic = p.trim();
-    const pf = dn
-      ? `<div class="pic-locked" style="font-size:13px;padding:4px 0">${LOCKICO} ${p}</div>`
-      : `<select class="pic-sel-full" data-row="${r._row}" data-picsel="${r._row}" onchange="onPicChange(this)">${picOptionsHTML(p)}</select>
-         <input class="pic-new-full" type="text" placeholder="Ketik nama baru…" data-row="${r._row}" data-picnew="${r._row}" oninput="onPicNew(this)">`;
-    const igBtn = ig ? `<a class="btn-ig" href="${ig}" target="_blank" rel="noopener" style="height:38px;border-radius:var(--r-lg);padding:0 12px;font-size:12px;display:inline-flex;align-items:center;gap:4px">${IGICO} IG</a>` : '';
-    const waDis = (!initPic && !dn) ? 'dis' : '';
-    const waSt = 'flex:1;height:38px;font-size:13px;justify-content:center;display:inline-flex;align-items:center;gap:5px;border-radius:var(--r-lg)';
-    const mkSt = 'flex:1;height:38px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;border-radius:var(--r-lg)';
-    return `<div class="vcard ${dn ? 'done' : ''}" data-row="${r._row}">
+  const fd=getFiltered(), cl=document.getElementById('cards');
+  if(!fd.length) { cl.innerHTML=`<div class="state" style="padding:40px 0"><span class="state-title">Tidak ada hasil</span></div>`; return; }
+  cl.innerHTML=fd.map((r,i)=>{
+    const dn=isDone(r), p=r['PIC']||'', ig=r['Instagram']||r['instagram']||r['Link Instagram']||'';
+    const hfp=r['Harga Full Print']||'—', hsp=r['Harga Spec+']||'—';
+    const ts=r['Waktu Chat']?`<div class="vc-ts">Dichat: ${r['Waktu Chat']}</div>`:'';
+    const pf=dn?`<div class="pic-locked" style="font-size:13px;padding:4px 0">${LOCKICO} ${p}</div>`
+      :`<input class="pic-inp-full" type="text" placeholder="Nama PIC…" value="${p}" data-row="${r._row}" data-picinp="${r._row}" oninput="onPicInp(this)">`;
+    const waDis=(!p&&!dn)?'dis':'';
+    const waSt=`display:inline-flex;align-items:center;justify-content:center;gap:5px;flex:1;height:38px;font-size:13px;border-radius:var(--r-lg)`;
+    const mkSt=`display:inline-flex;align-items:center;justify-content:center;flex:1;height:38px;font-size:13px;border-radius:var(--r-lg)`;
+    return `<div class="vcard ${dn?'done':''}" data-row="${r._row}">
       <div class="vc-top">
         <div>
-          <div class="vc-title">${ig ? `<a href="${ig}" target="_blank" rel="noopener" style="color:inherit">${r['Nama Apparel'] || '—'}</a>` : r['Nama Apparel'] || '—'}</div>
+          <div class="vc-title">${ig?`<a href="${ig}" target="_blank" rel="noopener" style="color:inherit">${r['Nama Apparel']||'—'}</a>`:r['Nama Apparel']||'—'}</div>
           <div class="vc-meta">${lokasiHTML(r)}<span>·</span><span>${phone(r)}</span></div>
         </div>
-        <span class="badge ${dn ? 'b-done' : 'b-pend'}">${dn ? '✓' : 'Belum'}</span>
+        <span class="badge ${dn?'b-done':'b-pend'}">${dn?'✓':'Belum'}</span>
       </div>
       <div class="vc-grid">
         <div class="pb"><div class="pb-lbl">Full Print</div><div class="pb-val">${hfp}</div></div>
         <div class="pb"><div class="pb-lbl">Spec+</div><div class="pb-val">${hsp}</div></div>
-        <div class="pb"><div class="pb-lbl">Pecah Pola</div><div class="pb-val" style="font-size:12px">${pp}</div></div>
+        <div class="pb" style="grid-column:span 2"><div class="pb-lbl">Pecah Pola</div><div class="pb-val" style="font-size:12px">${ppolaHTML(r)}</div></div>
       </div>
-      <div style="margin-bottom:12px"><div class="vc-pic-lbl">Nama PIC</div>${pf}</div>
+      <div style="margin-bottom:4px"><div class="vc-pic-lbl">Nama PIC</div>${pf}</div>
       <div class="vc-acts">
-        <a class="btn-wa ${waDis}" data-wa="${r._row}" href="${initPic || dn ? waHref(r, initPic || p) : '#'}" target="_blank" rel="noopener" style="${waSt}">${WAICO} Buka WA</a>
-        ${igBtn}
-        ${dn
-          ? `<button class="btn-mark" style="${mkSt}" disabled>✓ Sudah Chat</button>`
-          : `<button class="btn-mark" style="${mkSt}" data-mark="${r._row}" data-row="${r._row}" onclick="markDone(this)"${!initPic ? ' disabled' : ''}>Tandai Chat</button>`}
+        <a class="btn-wa ${waDis}" data-wa="${r._row}" href="${p||dn?waHref(r,p):'#'}" target="_blank" rel="noopener" style="${waSt}">${WAICO} Buka WA</a>
+        ${ig?`<a class="btn-ig" href="${ig}" target="_blank" rel="noopener" style="height:38px;border-radius:var(--r-lg);padding:0 12px;font-size:12px;display:inline-flex;align-items:center;gap:4px">${IGICO} IG</a>`:''}
+        ${dn?`<button class="btn-mark" style="${mkSt}" disabled>✓ Sudah Chat</button>`
+           :`<button class="btn-mark" style="${mkSt}" data-mark="${r._row}" data-row="${r._row}" onclick="markDone(this)"${!p?' disabled':''}>Tandai Chat</button>`}
       </div>
       ${ts}
     </div>`;
   }).join('');
 }
 
-// ── MARK DONE ──
+function onPicInp(inp) {
+  const row=+inp.dataset.row, val=inp.value.trim();
+  const rd=rows.find(r=>r._row===row); if(rd) rd['PIC']=inp.value;
+  const wa=document.querySelector(`[data-wa="${row}"]`);
+  if(wa) { if(val){ wa.href=waHref(rd,val); wa.classList.remove('dis'); } else { wa.href='#'; wa.classList.add('dis'); } }
+  const mk=document.querySelector(`[data-mark="${row}"]`);
+  if(mk) mk.disabled=!val;
+}
+
 async function markDone(btn) {
-  const row = +btn.dataset.row;
-  const rd = rows.find(r => r._row === row);
-  if (!rd) return;
-  const pic = getPicVal(row);
-  if (!pic) { toast('Pilih atau isi nama PIC dulu!', 'err'); return; }
-  btn.disabled = true; btn.textContent = '…';
-  const ts = new Date().toLocaleString('id-ID', { timeZone: 'Asia/Jakarta', day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+  const row=+btn.dataset.row, rd=rows.find(r=>r._row===row);
+  if(!rd) return;
+  const pic=rd['PIC']||getPicInp(row);
+  if(!pic) { toast('Isi nama PIC dulu!','err'); return; }
+  btn.disabled=true; btn.textContent='…';
+  const ts=new Date().toLocaleString('id-ID',{timeZone:'Asia/Jakarta',day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
   try {
-    const u = getUrl();
-    if (u) await fetch(u, { method: 'POST', body: JSON.stringify({ row, pic, status: 'Sudah Chat', timestamp: ts }), headers: { 'Content-Type': 'text/plain' } });
-    rd['PIC'] = pic; rd['Status'] = 'Sudah Chat'; rd['Waktu Chat'] = ts;
-    savePic(pic);
+    const u=getUrl();
+    if(u) await fetch(u,{method:'POST',body:JSON.stringify({row,pic,status:'Sudah Chat',timestamp:ts}),headers:{'Content-Type':'text/plain'}});
+    rd['PIC']=pic; rd['Status']='Sudah Chat'; rd['Waktu Chat']=ts;
+    addPicDone(pic);
+    buildFilterPanel();
     rerender(); updateStats(rows);
     toast(`${rd['Nama Apparel']} ditandai sudah chat ✓`);
-  } catch (e) { btn.disabled = false; btn.textContent = 'Tandai'; toast('Gagal: ' + e.message, 'err'); }
+  } catch(e) { btn.disabled=false; btn.textContent='Tandai'; toast('Gagal: '+e.message,'err'); }
 }
 
-// ── TOAST ──
-function toast(msg, t = '') {
-  const c = document.getElementById('toasts');
-  const el = document.createElement('div');
-  el.className = 'toast' + (t ? ' ' + t : ''); el.textContent = msg; c.appendChild(el);
-  setTimeout(() => { el.style.cssText = 'opacity:0;transform:translateY(6px);transition:all .2s'; setTimeout(() => el.remove(), 200); }, 3200);
+function toast(msg,t='') {
+  const c=document.getElementById('toasts'), el=document.createElement('div');
+  el.className='toast'+(t?' '+t:''); el.textContent=msg; c.appendChild(el);
+  setTimeout(()=>{el.style.cssText='opacity:0;transform:translateY(6px);transition:all .2s'; setTimeout(()=>el.remove(),200);},3200);
 }
 
-// ── THEME ──
-const MOON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-const SUN = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-let theme = localStorage.getItem('snfc_theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
-function applyTheme() {
-  document.documentElement.setAttribute('data-theme', theme);
-  const ico = document.getElementById('themeIco');
-  if (ico) ico.outerHTML = (theme === 'dark' ? SUN : MOON).replace('<svg', '<svg id="themeIco"');
-}
-function toggleTheme() { theme = theme === 'dark' ? 'light' : 'dark'; localStorage.setItem('snfc_theme', theme); applyTheme(); }
+const MOON='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+const SUN='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+let theme=localStorage.getItem('snfc_theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+function applyTheme(){document.documentElement.setAttribute('data-theme',theme);const ico=document.getElementById('themeIco');if(ico)ico.outerHTML=(theme==='dark'?SUN:MOON).replace('<svg','<svg id="themeIco"');}
+function toggleTheme(){theme=theme==='dark'?'light':'dark';localStorage.setItem('snfc_theme',theme);applyTheme();}
 applyTheme();
-
 loadData();
 </script>
 </body>
