@@ -7,208 +7,357 @@
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAIADaAwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgCAAAAkJFoNgAAAQhpQ0NQSUNDIFByb2ZpbGUAAHicY2BgPMEABCwGDAy5eSVFQe5OChGRUQrsDxgYgRAMEpOLCxhwA6Cqb9cgai/r4lGHC3CmpBYnA+kPQKxSBLQcaKQIkC2SDmFrgNhJELYNiF1eUlACZAeA2EUhQc5AdgqQrZGOxE5CYicXFIHU9wDZNrk5pckIdzPwpOaFBgNpDiCWYShmCGJwZ3AC+R+iJH8RA4PFVwYG5gkIsaSZDAzbWxkYJG4hxFQWMDDwtzAwbDuPEEOESUFiUSJYiAWImdLSGBg+LWdg4I1kYBC+wMDAFQ0LCBxuUwC7zZ0hHwjTGXIYUoEingx5DMkMekCWEYMBgyGDGQCm1j8/R2zgUAAAAo1JREFUeJxVj0tIVGEYht//P+c0c/4ZHUfJ+22mchJF04xACldRYUEUZEIYSBik0coIKlrlpkWr3BQVUuimIIgwKkGCCrpqFHXMHEpNx8vcao7jnPN/LWaMWr2L73l4+JiUkjGWSKy8Hn9krsQApqoqANu2AXDGJaS+zr21brcQTiJSiWzG1KH7l69eu1Tla0hZyeWlMIHcbreiKKnUqsMhgtMfe7rOdbZfILJVAABm5yd+GlndR3qjsQXLsmPRWOu+1rGxsUgknJtTcLGvZ3beSJMZQQhRvNGemH2YTJqKyucW5p6+mAmFQpFozMf8ZQGp6+I/QdWUX4n4ncEb1U3Oj69MTeMjo084R80218itYZGtausyJE+PlaIvb60fBpNJ4Q94g5/k7Ffmr/KmTMe0wY13lpWiNYExALqLuzxgTBKT0eVVAADFwikwYky6cyDcHAAYyxQUle0/Jpy6pgvuCwhftV65Wa8I6MLFnbq2r0Nwha0ViACEQ5bmgMhSHgwsxWLx/FJeWKFEI/EHA0uubEVzIByyAIAoU5A2fXiZPNiVW1zhbmk4pZBXkd6WLd1F5a4Dx3PHnyelzPygpteT4/Gu505dPXRSvHg9WL9TBbE3n++1nc62V1VvPvd4PAAI4CAAaKzbEV2y+i/MDN9UEvO+yOLK8mLi23vn0JV4//mZeNhqrNuBtCGllFKapnniTDMY6mu3Px5+1rLHX9PkuT1wt6RoAzi6eptN00yTICLbtonImBxvPVpaWKHV1lbvbc/fdTivrLwkKw/7O0qNybG/GCMiAJIkZzz4feL64Nmp+dHgl9+MM1/A7Sto6WzrqyzflAYAZIS/DoCpoDETMkBUXBDwV1b9ewLwB+CaNK/GNC5tAAAAAElFTkSuQmCC">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 <style>
 :root,[data-theme="light"]{
-  --bg:#ffffff;--surface:#f9f9f8;--surface-2:#f3f3f1;--surface-hover:#efefed;
-  --border:rgba(0,0,0,.08);--border-strong:rgba(0,0,0,.14);
-  --text:#0f0f0e;--text-2:#5c5c5a;--text-3:#9b9b98;
-  --primary:#6aaa1e;--primary-hover:#5a9118;--primary-fg:#fff;
-  --success:#30a46c;--success-bg:#f0faf5;--success-border:rgba(48,164,108,.2);
-  --warning:#f76b15;--warning-bg:#fff7ed;
-  --danger:#e5484d;--danger-bg:#fff5f5;
-  --wa:#25d366;--wa-hover:#1db954;
-  --radius-sm:6px;--radius-md:8px;--radius-lg:12px;--radius-xl:16px;
-  --shadow-sm:0 1px 2px rgba(0,0,0,.05);
-  --shadow-md:0 2px 8px rgba(0,0,0,.08),0 0 0 1px rgba(0,0,0,.04);
+  --bg:#fafafa;
+  --surface:#ffffff;
+  --surface-2:#f4f4f5;
+  --surface-3:#efefef;
+  --surface-hover:#f0f0f0;
+  --border:rgba(0,0,0,.09);
+  --border-strong:rgba(0,0,0,.15);
+  --text:#09090b;
+  --text-2:#52525b;
+  --text-3:#a1a1aa;
+  --accent:#18181b;
+  --accent-fg:#ffffff;
+  --success:#16a34a;
+  --success-bg:#f0fdf4;
+  --success-border:rgba(22,163,74,.2);
+  --warning:#d97706;
+  --warning-bg:#fffbeb;
+  --danger:#dc2626;
+  --danger-bg:#fef2f2;
+  --wa:#25d366;
+  --wa-hover:#1db954;
+  --ig:#e1306c;
+  --maps:#4285f4;
+  --radius-xs:4px;--radius-sm:6px;--radius-md:8px;--radius-lg:12px;--radius-xl:16px;
+  --shadow-xs:0 1px 2px rgba(0,0,0,.06);
+  --shadow-sm:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.04);
+  --shadow-md:0 4px 6px -1px rgba(0,0,0,.07),0 2px 4px -1px rgba(0,0,0,.04);
+  --shadow-card:0 0 0 1px rgba(0,0,0,.06),0 2px 8px rgba(0,0,0,.06);
   --t:140ms cubic-bezier(.16,1,.3,1);
-  --font:'Inter',system-ui,sans-serif;
+  --font:'Plus Jakarta Sans',system-ui,sans-serif;
 }
 [data-theme="dark"]{
-  --bg:#111110;--surface:#191918;--surface-2:#222221;--surface-hover:#2a2a28;
-  --border:rgba(255,255,255,.07);--border-strong:rgba(255,255,255,.12);
-  --text:#ededec;--text-2:#a0a09e;--text-3:#62625f;
-  --primary:#7dc92a;--primary-hover:#8fd930;--primary-fg:#111;
-  --success:#3dd68c;--success-bg:rgba(48,164,108,.12);--success-border:rgba(61,214,140,.2);
-  --warning:#ff8b3e;--warning-bg:rgba(247,107,21,.1);
-  --danger:#f2555a;--danger-bg:rgba(229,72,77,.1);
-  --shadow-sm:0 1px 3px rgba(0,0,0,.3);--shadow-md:0 2px 8px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.05);
+  --bg:#09090b;
+  --surface:#111113;
+  --surface-2:#18181b;
+  --surface-3:#27272a;
+  --surface-hover:#27272a;
+  --border:rgba(255,255,255,.07);
+  --border-strong:rgba(255,255,255,.12);
+  --text:#fafafa;
+  --text-2:#a1a1aa;
+  --text-3:#52525b;
+  --accent:#fafafa;
+  --accent-fg:#09090b;
+  --success:#22c55e;
+  --success-bg:rgba(22,163,74,.12);
+  --success-border:rgba(34,197,94,.2);
+  --warning:#f59e0b;
+  --warning-bg:rgba(217,119,6,.1);
+  --danger:#ef4444;
+  --danger-bg:rgba(220,38,38,.1);
+  --shadow-xs:0 1px 2px rgba(0,0,0,.3);
+  --shadow-sm:0 1px 3px rgba(0,0,0,.4);
+  --shadow-md:0 4px 6px rgba(0,0,0,.4);
+  --shadow-card:0 0 0 1px rgba(255,255,255,.06),0 2px 8px rgba(0,0,0,.4);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 body{font-family:var(--font);font-size:14px;color:var(--text);background:var(--bg);min-height:100dvh;line-height:1.5}
 button{cursor:pointer;font-family:inherit;border:none;background:none}
 input{font-family:inherit}
-a{text-decoration:none}
+a{text-decoration:none;color:inherit}
 
-/* HEADER */
-.header{position:sticky;top:0;z-index:50;background:color-mix(in oklab,var(--bg) 85%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 20px;height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.header-left{display:flex;align-items:center;gap:10px}
+/* ─── HEADER ─── */
+.header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  padding:0 24px;height:58px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.header-left{display:flex;align-items:center;gap:11px}
 .logo{height:38px;width:auto;border-radius:4px;object-fit:contain;flex-shrink:0}
-.brand-name{font-size:13px;font-weight:700;letter-spacing:-.01em;color:var(--text);line-height:1.2}
-.brand-tag{font-size:11px;color:var(--text-3)}
+.brand-name{font-size:13px;font-weight:800;letter-spacing:-.02em;color:var(--text);line-height:1.2}
+.brand-tag{font-size:11px;font-weight:500;color:var(--text-3);letter-spacing:.01em}
 .header-right{display:flex;align-items:center;gap:6px}
 
-/* BUTTONS */
-.btn{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:500;border-radius:var(--radius-md);padding:0 12px;height:34px;transition:background var(--t),color var(--t),opacity var(--t);white-space:nowrap}
-.btn-primary{background:var(--primary);color:var(--primary-fg)}
-.btn-primary:hover{background:var(--primary-hover)}
+/* ─── BUTTONS ─── */
+.btn{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;border-radius:var(--radius-md);padding:0 14px;height:34px;transition:all var(--t);white-space:nowrap;letter-spacing:-.01em}
+.btn-accent{background:var(--accent);color:var(--accent-fg);box-shadow:var(--shadow-sm)}
+.btn-accent:hover{opacity:.88}
 .btn-ghost{background:transparent;color:var(--text-2);border:1px solid var(--border)}
-.btn-ghost:hover{background:var(--surface-hover);color:var(--text)}
-.btn-sm{height:30px;padding:0 10px;font-size:12px;border-radius:var(--radius-sm)}
-.btn-icon{width:34px;height:34px;padding:0;border-radius:var(--radius-md);display:inline-flex;align-items:center;justify-content:center;background:transparent;color:var(--text-2);border:1px solid var(--border)}
-.btn-icon:hover{background:var(--surface-hover);color:var(--text)}
+.btn-ghost:hover{background:var(--surface-hover);color:var(--text);border-color:var(--border-strong)}
+.btn-sm{height:30px;padding:0 11px;font-size:12px;border-radius:var(--radius-sm)}
+.btn-icon{width:34px;height:34px;padding:0;border-radius:var(--radius-md);display:inline-flex;align-items:center;justify-content:center;background:transparent;color:var(--text-2);border:1px solid var(--border);transition:all var(--t)}
+.btn-icon:hover{background:var(--surface-hover);color:var(--text);border-color:var(--border-strong)}
 
-/* MAIN */
-.main{flex:1;padding:24px 20px;max-width:1100px;width:100%;margin:0 auto}
+/* ─── MAIN ─── */
+.main{padding:28px 24px;max-width:1120px;width:100%;margin:0 auto}
+.page-header{margin-bottom:24px}
+.page-title{font-size:20px;font-weight:800;letter-spacing:-.03em}
+.page-subtitle{font-size:13px;font-weight:400;color:var(--text-3);margin-top:3px}
 
-/* PAGE HEADER */
-.page-title{font-size:18px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
-.page-subtitle{font-size:13px;color:var(--text-2);margin-top:2px;margin-bottom:20px}
-
-/* STATS */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
-.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:14px 16px}
-.stat-label{font-size:10px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
-.stat-value{font-size:22px;font-weight:700;letter-spacing:-.03em;color:var(--text);line-height:1}
-.stat-sub{font-size:11px;color:var(--text-3);margin-top:3px}
+/* ─── STATS ─── */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.stat-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  padding:16px 18px;
+  box-shadow:var(--shadow-xs);
+  position:relative;overflow:hidden;
+}
+.stat-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--border);border-radius:2px 2px 0 0;
+}
+.stat-card.done::after{background:var(--success)}
+.stat-card.pending::after{background:var(--warning)}
+.stat-label{font-size:10px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+.stat-value{font-size:26px;font-weight:800;letter-spacing:-.04em;color:var(--text);line-height:1}
 .stat-card.done .stat-value{color:var(--success)}
 .stat-card.pending .stat-value{color:var(--warning)}
+.stat-sub{font-size:11px;font-weight:500;color:var(--text-3);margin-top:4px}
 
-/* TEMPLATE PREVIEW */
-.template-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 18px;margin-bottom:20px}
-.template-card-label{font-size:10px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;display:flex;align-items:center;gap:6px}
-.template-card-label svg{color:var(--wa)}
-.template-text{font-size:13px;color:var(--text-2);line-height:1.7;background:var(--surface-2);border-radius:var(--radius-md);padding:12px 14px;border:1px solid var(--border)}
-.template-text strong{color:var(--primary);font-weight:600}
-.template-note{font-size:11px;color:var(--text-3);margin-top:8px}
+/* ─── TEMPLATE CARD ─── */
+.template-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:16px 18px;
+  margin-bottom:24px;box-shadow:var(--shadow-xs);
+}
+.template-card-label{font-size:10px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.template-text{font-size:13px;font-weight:400;color:var(--text-2);line-height:1.75;background:var(--surface-2);border-radius:var(--radius-md);padding:12px 14px;border:1px solid var(--border);font-style:italic}
+.template-text strong{color:var(--text);font-style:normal;font-weight:700}
+.template-note{font-size:11px;font-weight:500;color:var(--text-3);margin-top:8px}
 
-/* FILTER BAR */
-.filter-bar{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
-.search-wrap{position:relative;flex:1;min-width:160px}
-.search-icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--text-3);pointer-events:none}
-.search-input{width:100%;height:34px;padding:0 12px 0 32px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);color:var(--text);font-size:13px;transition:border-color var(--t),box-shadow var(--t)}
-.search-input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px color-mix(in oklab,var(--primary) 15%,transparent)}
-.search-input::placeholder{color:var(--text-3)}
+/* ─── FILTER ─── */
+.filter-bar{display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.search-wrap{position:relative;flex:1;min-width:180px}
+.search-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--text-3);pointer-events:none}
+.search-input{
+  width:100%;height:36px;padding:0 12px 0 34px;
+  border:1px solid var(--border);border-radius:var(--radius-md);
+  background:var(--surface);color:var(--text);font-size:13px;font-weight:500;font-family:var(--font);
+  transition:border-color var(--t),box-shadow var(--t);
+  box-shadow:var(--shadow-xs);
+}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 10%,transparent)}
+.search-input::placeholder{color:var(--text-3);font-weight:400}
 .filter-chips{display:flex;gap:6px;flex-wrap:wrap}
-.chip{height:30px;padding:0 10px;border-radius:var(--radius-sm);font-size:12px;font-weight:500;border:1px solid var(--border);background:var(--surface);color:var(--text-2);cursor:pointer;transition:all var(--t);white-space:nowrap}
-.chip:hover{background:var(--surface-hover)}
-.chip.active{background:var(--text);color:var(--bg);border-color:var(--text)}
+.chip{height:32px;padding:0 12px;border-radius:var(--radius-sm);font-size:12px;font-weight:600;border:1px solid var(--border);background:var(--surface);color:var(--text-2);cursor:pointer;transition:all var(--t);white-space:nowrap;letter-spacing:-.01em;box-shadow:var(--shadow-xs)}
+.chip:hover{background:var(--surface-hover);color:var(--text)}
+.chip.active{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
 
-/* TABLE — desktop */
-.table-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-sm)}
+/* ─── TABLE ─── */
+.table-wrap{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius-xl);
+  overflow:hidden;
+  box-shadow:var(--shadow-card);
+}
 .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 table{width:100%;border-collapse:collapse;font-size:13px}
 thead{background:var(--surface-2);border-bottom:1px solid var(--border)}
-th{padding:10px 14px;text-align:left;font-size:10px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
-td{padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:middle}
+th{
+  padding:11px 14px;text-align:left;
+  font-size:10px;font-weight:700;color:var(--text-3);
+  text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;
+}
+td{padding:13px 14px;border-bottom:1px solid var(--border);vertical-align:middle}
 tbody tr:last-child td{border-bottom:none}
 tbody tr{transition:background var(--t)}
-tbody tr:hover{background:var(--surface-hover)}
-tbody tr.is-done{opacity:.72}
+tbody tr:hover{background:var(--surface-2)}
+tbody tr.is-done{opacity:.65}
 tbody tr.is-done:hover{opacity:1}
 
-/* CELLS */
-.cell-no{width:36px;font-size:12px;color:var(--text-3);font-weight:500}
-.cell-name strong{font-weight:500;color:var(--text);display:block}
-.cell-name .sub{font-size:11px;color:var(--text-3);margin-top:1px}
-.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:var(--radius-sm);font-size:11px;font-weight:500;white-space:nowrap}
-.badge-lokasi{background:color-mix(in oklab,var(--primary) 12%,transparent);color:var(--primary)}
+/* ─── CELLS ─── */
+.cell-no{width:32px;font-size:11px;color:var(--text-3);font-weight:600;text-align:center}
+.vendor-name{font-weight:700;font-size:13px;color:var(--text);letter-spacing:-.01em}
+.vendor-sub{font-size:11px;font-weight:500;color:var(--text-3);margin-top:2px}
+.link-name{color:var(--text);transition:color var(--t)}
+.link-name:hover{color:var(--ig);text-decoration:underline;text-underline-offset:3px}
+
+.badge{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:var(--radius-xs);font-size:11px;font-weight:600;white-space:nowrap;letter-spacing:.01em}
 .badge-done{background:var(--success-bg);color:var(--success);border:1px solid var(--success-border)}
 .badge-pending{background:var(--surface-2);color:var(--text-3);border:1px solid var(--border)}
-.price-val{font-size:12px;color:var(--text-2);white-space:nowrap}
-.price-na{font-size:11px;color:var(--text-3);font-style:italic}
-.ts{font-size:10px;color:var(--text-3);margin-top:2px}
 
-/* PIC */
-.pic-input{height:30px;padding:0 10px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--bg);color:var(--text);font-size:12px;font-family:inherit;width:118px;transition:border-color var(--t),box-shadow var(--t)}
-.pic-input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 2px color-mix(in oklab,var(--primary) 15%,transparent)}
-.pic-input::placeholder{color:var(--text-3)}
-.pic-input:disabled{opacity:.5;cursor:not-allowed;background:var(--surface-2)}
-.pic-locked{font-size:12px;font-weight:500;color:var(--text-2);display:inline-flex;align-items:center;gap:4px}
+.lokasi-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;color:var(--maps);transition:opacity var(--t)}
+.lokasi-link:hover{opacity:.75}
+.lokasi-text{font-size:12px;font-weight:500;color:var(--text-2)}
 
-/* ACTIONS */
-.action-wrap{display:flex;align-items:center;gap:5px;flex-wrap:nowrap}
-.btn-wa{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 10px;border-radius:var(--radius-sm);background:var(--wa);color:#fff;font-size:12px;font-weight:600;transition:background var(--t),opacity var(--t);white-space:nowrap}
-.btn-wa:hover{background:var(--wa-hover)}
-.btn-mark{height:28px;padding:0 10px;border-radius:var(--radius-sm);font-size:12px;font-weight:500;border:1px solid var(--border);background:var(--surface);color:var(--text-2);transition:all var(--t);white-space:nowrap}
-.btn-mark:hover:not(:disabled){background:var(--success-bg);color:var(--success);border-color:var(--success-border)}
-.btn-mark:disabled{opacity:.35;cursor:not-allowed}
-.btn-copy{height:28px;padding:0 8px;border-radius:var(--radius-sm);font-size:11px;border:1px solid var(--border);background:var(--surface);color:var(--text-3);transition:all var(--t)}
+.price-val{font-size:12px;font-weight:600;color:var(--text-2)}
+.price-na{font-size:11px;font-weight:500;color:var(--text-3)}
+.ts{font-size:10px;font-weight:500;color:var(--text-3);margin-top:2px}
+
+/* ─── PIC ─── */
+.pic-input{
+  height:30px;padding:0 10px;
+  border:1px solid var(--border);border-radius:var(--radius-sm);
+  background:var(--bg);color:var(--text);font-size:12px;font-weight:500;font-family:var(--font);
+  width:120px;transition:border-color var(--t),box-shadow var(--t);
+}
+.pic-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 10%,transparent)}
+.pic-input::placeholder{color:var(--text-3);font-weight:400}
+.pic-input:disabled{opacity:.45;cursor:not-allowed;background:var(--surface-2)}
+.pic-locked{font-size:12px;font-weight:600;color:var(--text-2);display:inline-flex;align-items:center;gap:5px}
+
+/* ─── ACTIONS ─── */
+.action-wrap{display:flex;align-items:center;gap:4px;flex-wrap:nowrap}
+.btn-wa{
+  display:inline-flex;align-items:center;gap:4px;
+  height:28px;padding:0 10px;border-radius:var(--radius-sm);
+  background:var(--wa);color:#fff;font-size:11px;font-weight:700;font-family:var(--font);
+  transition:all var(--t);white-space:nowrap;letter-spacing:.01em;
+}
+.btn-wa:hover{background:var(--wa-hover);transform:translateY(-1px);box-shadow:0 4px 8px rgba(37,211,102,.3)}
+.btn-wa:disabled,.btn-wa[style*="pointer-events:none"]{transform:none;box-shadow:none}
+.btn-ig{
+  display:inline-flex;align-items:center;gap:3px;
+  height:28px;padding:0 8px;border-radius:var(--radius-sm);
+  background:transparent;color:var(--ig);font-size:11px;font-weight:700;font-family:var(--font);
+  border:1px solid color-mix(in srgb,var(--ig) 30%,transparent);
+  transition:all var(--t);white-space:nowrap;
+}
+.btn-ig:hover{background:color-mix(in srgb,var(--ig) 8%,transparent);transform:translateY(-1px)}
+.btn-mark{
+  height:28px;padding:0 10px;border-radius:var(--radius-sm);
+  font-size:11px;font-weight:700;font-family:var(--font);letter-spacing:.01em;
+  border:1px solid var(--border);background:var(--surface-2);color:var(--text-2);
+  transition:all var(--t);white-space:nowrap;
+}
+.btn-mark:hover:not(:disabled){background:var(--success-bg);color:var(--success);border-color:var(--success-border);transform:translateY(-1px)}
+.btn-mark:disabled{opacity:.3;cursor:not-allowed}
+.btn-copy{
+  height:28px;padding:0 8px;border-radius:var(--radius-sm);
+  font-size:11px;font-weight:600;font-family:var(--font);
+  border:1px solid var(--border);background:transparent;color:var(--text-3);
+  transition:all var(--t);
+}
 .btn-copy:hover{background:var(--surface-hover);color:var(--text-2)}
 .btn-copy.copied{background:var(--success-bg);color:var(--success);border-color:var(--success-border)}
 
-/* CARD VIEW — mobile */
-.card-list{display:none;flex-direction:column;gap:10px}
-.vendor-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px;transition:background var(--t)}
-.vendor-card.is-done{opacity:.75}
-.vendor-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:10px}
-.vendor-card-name{font-weight:600;font-size:14px;color:var(--text)}
-.vendor-card-meta{font-size:12px;color:var(--text-3);margin-top:2px}
-.vendor-card-prices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
-.price-block{background:var(--surface-2);border-radius:var(--radius-sm);padding:8px 10px}
-.price-block-label{font-size:10px;color:var(--text-3);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
-.price-block-val{font-size:13px;font-weight:500;color:var(--text-2)}
-.vendor-card-pic{margin-bottom:10px}
-.pic-label{font-size:11px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px}
-.pic-input-full{width:100%;height:36px;padding:0 12px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--bg);color:var(--text);font-size:13px;font-family:inherit;transition:border-color var(--t),box-shadow var(--t)}
-.pic-input-full:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px color-mix(in oklab,var(--primary) 15%,transparent)}
-.pic-input-full::placeholder{color:var(--text-3)}
-.pic-input-full:disabled{opacity:.5;background:var(--surface-2);cursor:not-allowed}
-.vendor-card-actions{display:flex;gap:8px}
-.vendor-card-actions .btn-wa{flex:1;justify-content:center;height:36px;font-size:13px}
-.vendor-card-actions .btn-mark{flex:1;justify-content:center;height:36px;font-size:13px;display:inline-flex;align-items:center}
-.vendor-card-actions .btn-copy{height:36px;font-size:12px}
-.vendor-card-ts{font-size:11px;color:var(--text-3);margin-top:8px;text-align:center}
+/* ─── MOBILE CARDS ─── */
+.card-list{display:none;flex-direction:column;gap:12px}
+.vendor-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius-xl);
+  padding:18px;
+  box-shadow:var(--shadow-card);
+  transition:box-shadow var(--t);
+}
+.vendor-card:hover{box-shadow:var(--shadow-md)}
+.vendor-card.is-done{opacity:.7}
+.vendor-card.is-done:hover{opacity:1}
+.vendor-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:12px}
+.vendor-card-name{font-weight:800;font-size:15px;letter-spacing:-.02em}
+.vendor-card-meta{font-size:12px;font-weight:500;color:var(--text-3);margin-top:3px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.vendor-card-prices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.price-block{background:var(--surface-2);border-radius:var(--radius-md);padding:10px 12px;border:1px solid var(--border)}
+.price-block-label{font-size:9px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px}
+.price-block-val{font-size:13px;font-weight:700;color:var(--text-2)}
+.vendor-card-pic{margin-bottom:12px}
+.pic-label{font-size:10px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
+.pic-input-full{
+  width:100%;height:38px;padding:0 12px;
+  border:1px solid var(--border);border-radius:var(--radius-md);
+  background:var(--bg);color:var(--text);font-size:13px;font-weight:500;font-family:var(--font);
+  transition:border-color var(--t),box-shadow var(--t);
+}
+.pic-input-full:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 10%,transparent)}
+.pic-input-full::placeholder{color:var(--text-3);font-weight:400}
+.pic-input-full:disabled{opacity:.45;background:var(--surface-2);cursor:not-allowed}
+.vendor-card-actions{display:flex;gap:7px;flex-wrap:wrap}
+.vendor-card-actions .btn-wa,.vendor-card-actions .btn-mark{
+  flex:1;justify-content:center;height:38px;font-size:13px;min-width:0;
+}
+.vendor-card-actions .btn-ig{height:38px;font-size:12px;padding:0 12px}
+.vendor-card-actions .btn-copy{height:38px;padding:0 10px;font-size:12px}
+.vendor-card-ts{font-size:11px;font-weight:500;color:var(--text-3);margin-top:10px;text-align:center}
 
-/* EMPTY/LOADING */
-.state-box{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 24px;gap:12px;color:var(--text-3)}
-.state-box svg{opacity:.35}
-.state-box p{font-size:13px;text-align:center;max-width:280px}
-.state-box .state-title{font-size:15px;font-weight:500;color:var(--text-2)}
-.spinner{width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin .7s linear infinite}
+/* ─── STATES ─── */
+.state-box{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px;gap:12px;color:var(--text-3)}
+.state-box svg{opacity:.3}
+.state-title{font-size:14px;font-weight:700;color:var(--text-2);letter-spacing:-.01em}
+.state-box p{font-size:13px;font-weight:400;text-align:center;max-width:280px;color:var(--text-3)}
+.spinner{width:20px;height:20px;border:2.5px solid var(--border);border-top-color:var(--text);border-radius:50%;animation:spin .65s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* TOAST */
+/* ─── TOAST ─── */
 .toast-container{position:fixed;bottom:20px;right:20px;z-index:999;display:flex;flex-direction:column;gap:8px;pointer-events:none}
-.toast{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:var(--radius-lg);font-size:13px;font-weight:500;box-shadow:var(--shadow-md);pointer-events:all;animation:toastIn .2s ease;max-width:calc(100vw - 40px)}
-.toast.success{background:var(--success);color:#fff}
+.toast{
+  display:flex;align-items:center;gap:10px;padding:12px 16px;
+  border-radius:var(--radius-lg);font-size:13px;font-weight:600;
+  box-shadow:var(--shadow-md);pointer-events:all;
+  animation:toastIn .2s ease;max-width:calc(100vw - 40px);
+  letter-spacing:-.01em;
+}
+.toast.success{background:var(--accent);color:var(--accent-fg)}
 .toast.error{background:var(--danger);color:#fff}
-.toast.default{background:var(--text);color:var(--bg)}
+.toast.default{background:var(--accent);color:var(--accent-fg)}
 @keyframes toastIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* SETUP BANNER */
-.setup-banner{background:var(--warning-bg);border:1px solid color-mix(in oklab,var(--warning) 25%,transparent);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:20px;display:flex;align-items:flex-start;gap:10px}
+/* ─── SETUP BANNER ─── */
+.setup-banner{
+  background:var(--warning-bg);border:1px solid color-mix(in srgb,var(--warning) 25%,transparent);
+  border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:24px;
+  display:flex;align-items:flex-start;gap:10px;
+  box-shadow:var(--shadow-xs);
+}
 .setup-banner svg{flex-shrink:0;color:var(--warning);margin-top:1px}
-.setup-banner-text strong{font-weight:600;font-size:13px;color:var(--text)}
-.setup-banner-text p{font-size:12px;color:var(--text-2);margin-top:3px;line-height:1.6}
+.setup-banner-text strong{font-weight:700;font-size:13px}
+.setup-banner-text p{font-size:12px;font-weight:400;color:var(--text-2);margin-top:3px;line-height:1.6}
 .btn-close-banner{margin-left:auto;flex-shrink:0;color:var(--text-3);padding:2px;background:none;border:none}
 .btn-close-banner:hover{color:var(--text)}
 
-/* MODAL */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;display:flex;align-items:flex-end;justify-content:center;padding:0;opacity:0;pointer-events:none;transition:opacity .2s}
+/* ─── MODAL ─── */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:100;
+  display:flex;align-items:flex-end;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .2s;
+}
 @media(min-width:600px){.modal-overlay{align-items:center;padding:20px}}
 .modal-overlay.open{opacity:1;pointer-events:all}
-.modal{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-xl) var(--radius-xl) 0 0;padding:24px 20px;width:100%;box-shadow:var(--shadow-md);transform:translateY(20px);transition:transform .25s cubic-bezier(.16,1,.3,1)}
-@media(min-width:600px){.modal{border-radius:var(--radius-xl);max-width:500px}}
+.modal{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:var(--radius-xl) var(--radius-xl) 0 0;
+  padding:24px 22px;width:100%;
+  box-shadow:0 -8px 32px rgba(0,0,0,.12);
+  transform:translateY(20px);transition:transform .25s cubic-bezier(.16,1,.3,1);
+}
+@media(min-width:600px){.modal{border-radius:var(--radius-xl);max-width:480px;box-shadow:var(--shadow-md)}}
 .modal-overlay.open .modal{transform:translateY(0)}
-.modal-drag{width:40px;height:4px;background:var(--border-strong);border-radius:2px;margin:0 auto 20px}
+.modal-drag{width:36px;height:4px;background:var(--border-strong);border-radius:2px;margin:0 auto 20px}
 @media(min-width:600px){.modal-drag{display:none}}
-.modal-title{font-size:16px;font-weight:600;margin-bottom:5px}
-.modal-desc{font-size:13px;color:var(--text-2);margin-bottom:18px;line-height:1.6}
-.modal-label{font-size:12px;font-weight:600;color:var(--text-2);margin-bottom:6px;display:block}
-.modal-input{width:100%;height:40px;padding:0 12px;border:1px solid var(--border-strong);border-radius:var(--radius-md);background:var(--surface);color:var(--text);font-size:13px;font-family:inherit;transition:border-color var(--t),box-shadow var(--t)}
-.modal-input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px color-mix(in oklab,var(--primary) 15%,transparent)}
-.modal-input::placeholder{color:var(--text-3)}
-.modal-hint{font-size:11px;color:var(--text-3);margin-top:6px}
-.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:20px}
+.modal-title{font-size:17px;font-weight:800;letter-spacing:-.02em;margin-bottom:5px}
+.modal-desc{font-size:13px;font-weight:400;color:var(--text-2);margin-bottom:20px;line-height:1.65}
+.modal-label{font-size:12px;font-weight:700;color:var(--text-2);margin-bottom:6px;display:block;letter-spacing:-.01em}
+.modal-input{
+  width:100%;height:42px;padding:0 13px;
+  border:1px solid var(--border-strong);border-radius:var(--radius-md);
+  background:var(--surface-2);color:var(--text);font-size:13px;font-weight:500;font-family:var(--font);
+  transition:border-color var(--t),box-shadow var(--t);
+}
+.modal-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 10%,transparent)}
+.modal-input::placeholder{color:var(--text-3);font-weight:400}
+.modal-hint{font-size:11px;font-weight:500;color:var(--text-3);margin-top:7px;line-height:1.6}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:22px}
 
-/* RESPONSIVE */
-@media(max-width:700px){
+/* ─── RESPONSIVE ─── */
+@media(max-width:720px){
   .header{padding:0 16px;height:54px}
   .main{padding:20px 16px}
-  .stats{grid-template-columns:repeat(3,1fr);gap:8px}
-  .stat-value{font-size:18px}
+  .stats{gap:8px}
+  .stat-value{font-size:22px}
+  .stat-card{padding:13px 14px}
   .table-wrap table{display:none}
   .card-list{display:flex}
   .brand-name{font-size:12px}
@@ -216,6 +365,7 @@ tbody tr.is-done:hover{opacity:1}
   .btn-ghost{padding:0;width:34px;justify-content:center}
   .toast-container{left:16px;right:16px;bottom:16px}
   .toast{max-width:100%}
+  .setup-banner{padding:12px 14px}
 }
 </style>
 </head>
@@ -230,7 +380,7 @@ tbody tr.is-done:hover{opacity:1}
     </div>
   </div>
   <div class="header-right">
-    <button class="btn btn-ghost btn-sm" id="btnConfig" onclick="openModal()">
+    <button class="btn btn-ghost btn-sm" onclick="openModal()">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
       <span>Setup API</span>
     </button>
@@ -250,59 +400,57 @@ tbody tr.is-done:hover{opacity:1}
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
     <div class="setup-banner-text">
       <strong>Belum ada Apps Script URL</strong>
-      <p>Klik <strong>Setup API</strong> di kanan atas dan paste URL dari Google Apps Script kamu agar data bisa dimuat dari Sheets.</p>
+      <p>Klik <b>Setup API</b> di kanan atas dan paste URL dari Google Apps Script kamu.</p>
     </div>
     <button class="btn-close-banner" onclick="document.getElementById('setupBanner').style.display='none'">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
   </div>
 
-  <h1 class="page-title">Daftar Vendor Apparel</h1>
-  <p class="page-subtitle">Tracking status chat vendor custom jersey SISA NAFAS FC</p>
+  <div class="page-header">
+    <h1 class="page-title">Daftar Vendor Apparel</h1>
+    <p class="page-subtitle">Tracking status chat vendor custom jersey SISA NAFAS FC</p>
+  </div>
 
-  <!-- STATS -->
   <div class="stats">
     <div class="stat-card"><div class="stat-label">Total</div><div class="stat-value" id="statTotal">—</div><div class="stat-sub">vendor</div></div>
     <div class="stat-card done"><div class="stat-label">Sudah Chat</div><div class="stat-value" id="statDone">—</div><div class="stat-sub">vendor</div></div>
     <div class="stat-card pending"><div class="stat-label">Belum Chat</div><div class="stat-value" id="statPending">—</div><div class="stat-sub">vendor</div></div>
   </div>
 
-  <!-- TEMPLATE PREVIEW -->
   <div class="template-card">
     <div class="template-card-label">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 0C5.365 0 0 5.364 0 11.988c0 2.123.558 4.12 1.532 5.851L.06 23.765a.5.5 0 0 0 .613.634l6.107-1.61A11.947 11.947 0 0 0 11.99 24C18.617 24 24 18.636 24 12.012 24 5.364 18.617 0 11.99 0zm0 21.818a9.836 9.836 0 0 1-5.022-1.369l-.36-.214-3.728.982.997-3.645-.234-.374A9.818 9.818 0 0 1 2.182 12c0-5.412 4.398-9.818 9.808-9.818 5.412 0 9.829 4.406 9.829 9.818 0 5.414-4.417 9.818-9.829 9.818z"/></svg>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 0C5.365 0 0 5.364 0 11.988c0 2.123.558 4.12 1.532 5.851L.06 23.765a.5.5 0 0 0 .613.634l6.107-1.61A11.947 11.947 0 0 0 11.99 24C18.617 24 24 18.636 24 12.012 24 5.364 18.617 0 11.99 0zm0 21.818a9.836 9.836 0 0 1-5.022-1.369l-.36-.214-3.728.982.997-3.645-.234-.374A9.818 9.818 0 0 1 2.182 12c0-5.412 4.398-9.818 9.808-9.818 5.412 0 9.829 4.406 9.829 9.818 0 5.414-4.417 9.818-9.829 9.818z"/></svg>
       Template Pesan WhatsApp
     </div>
     <div class="template-text">
       "Halo perkenalkan saya <strong>[Nama PIC]</strong> dari tim SISA NAFAS FC (@sisanafas.fc). Mau menanyakan terkait pembuatan custom jersey. Boleh minta pricelist terbaru nya? Terimakasih"
     </div>
-    <div class="template-note">Pesan ini otomatis terisi saat kamu klik tombol WA — nama PIC diambil dari input di tiap baris vendor.</div>
+    <div class="template-note">Nama PIC diambil dari input di tiap baris vendor — otomatis terisi saat klik tombol WA.</div>
   </div>
 
-  <!-- FILTER -->
   <div class="filter-bar">
     <div class="search-wrap">
       <svg class="search-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       <input class="search-input" type="search" id="searchInput" placeholder="Cari vendor atau lokasi…" oninput="filterRender()">
     </div>
     <div class="filter-chips">
-      <button class="chip active" data-filter="all" onclick="setFilter('all',this)">Semua</button>
-      <button class="chip" data-filter="pending" onclick="setFilter('pending',this)">Belum Chat</button>
-      <button class="chip" data-filter="done" onclick="setFilter('done',this)">Sudah Chat</button>
+      <button class="chip active" onclick="setFilter('all',this)">Semua</button>
+      <button class="chip" onclick="setFilter('pending',this)">Belum Chat</button>
+      <button class="chip" onclick="setFilter('done',this)">Sudah Chat</button>
     </div>
   </div>
 
-  <!-- TABLE (desktop) -->
   <div class="table-wrap">
     <div class="table-scroll">
       <table>
         <thead>
           <tr>
-            <th>#</th>
+            <th class="cell-no">#</th>
             <th>Nama Apparel</th>
             <th>Lokasi</th>
-            <th>Harga Full Print</th>
-            <th>Harga Spec+</th>
+            <th>Full Print</th>
+            <th>Spec+</th>
             <th>Status</th>
             <th>PIC</th>
             <th>Aksi</th>
@@ -315,25 +463,23 @@ tbody tr.is-done:hover{opacity:1}
     </div>
   </div>
 
-  <!-- CARD LIST (mobile) -->
   <div class="card-list" id="cardList">
     <div class="state-box" style="padding:40px 0"><div class="spinner"></div><span class="state-title">Memuat data…</span></div>
   </div>
 
 </main>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
   <div class="modal">
     <div class="modal-drag"></div>
     <h2 class="modal-title">Setup Apps Script URL</h2>
-    <p class="modal-desc">Paste URL dari Google Apps Script Web App kamu. Digunakan untuk membaca dan menulis data ke Google Sheets secara otomatis.</p>
+    <p class="modal-desc">Paste URL dari Google Apps Script Web App kamu untuk membaca dan menulis data ke Google Sheets.</p>
     <label class="modal-label" for="apiUrlInput">Apps Script URL</label>
     <input class="modal-input" id="apiUrlInput" type="url" placeholder="https://script.google.com/macros/s/.../exec" autocomplete="off">
     <p class="modal-hint">URL hanya tersimpan di browser kamu (localStorage). Tidak dikirim ke server manapun.</p>
     <div class="modal-actions">
       <button class="btn btn-ghost" onclick="closeModal()">Batal</button>
-      <button class="btn btn-primary" onclick="saveApiUrl()">Simpan & Refresh</button>
+      <button class="btn btn-accent" onclick="saveApiUrl()">Simpan & Refresh</button>
     </div>
   </div>
 </div>
@@ -342,7 +488,12 @@ tbody tr.is-done:hover{opacity:1}
 
 <script>
 const MSG = pic => `Halo perkenalkan saya ${pic} dari tim SISA NAFAS FC (@sisanafas.fc). Mau menanyakan terkait pembuatan custom jersey. Boleh minta pricelist terbaru nya? Terimakasih`;
-const WA_SVG = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 0C5.365 0 0 5.364 0 11.988c0 2.123.558 4.12 1.532 5.851L.06 23.765a.5.5 0 0 0 .613.634l6.107-1.61A11.947 11.947 0 0 0 11.99 24C18.617 24 24 18.636 24 12.012 24 5.364 18.617 0 11.99 0zm0 21.818a9.836 9.836 0 0 1-5.022-1.369l-.36-.214-3.728.982.997-3.645-.234-.374A9.818 9.818 0 0 1 2.182 12c0-5.412 4.398-9.818 9.808-9.818 5.412 0 9.829 4.406 9.829 9.818 0 5.414-4.417 9.818-9.829 9.818z"/></svg>`;
+
+const WA_SVG = `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 0C5.365 0 0 5.364 0 11.988c0 2.123.558 4.12 1.532 5.851L.06 23.765a.5.5 0 0 0 .613.634l6.107-1.61A11.947 11.947 0 0 0 11.99 24C18.617 24 24 18.636 24 12.012 24 5.364 18.617 0 11.99 0zm0 21.818a9.836 9.836 0 0 1-5.022-1.369l-.36-.214-3.728.982.997-3.645-.234-.374A9.818 9.818 0 0 1 2.182 12c0-5.412 4.398-9.818 9.808-9.818 5.412 0 9.829 4.406 9.829 9.818 0 5.414-4.417 9.818-9.829 9.818z"/></svg>`;
+
+const IG_SVG = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`;
+
+const MAPS_SVG = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
 
 let rows = [], currentFilter = 'all', picDraft = {};
 
@@ -352,24 +503,21 @@ function setApiUrl(u) { localStorage.setItem('snfc_api_url', u); }
 function openModal() {
   document.getElementById('apiUrlInput').value = getApiUrl();
   document.getElementById('modalOverlay').classList.add('open');
-  document.getElementById('apiUrlInput').focus();
+  setTimeout(() => document.getElementById('apiUrlInput').focus(), 200);
 }
 function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); }
 function closeModalOutside(e) { if (e.target === document.getElementById('modalOverlay')) closeModal(); }
-function saveApiUrl() {
-  setApiUrl(document.getElementById('apiUrlInput').value.trim());
-  closeModal(); loadData();
-}
+function saveApiUrl() { setApiUrl(document.getElementById('apiUrlInput').value.trim()); closeModal(); loadData(); }
 
 async function loadData() {
   const url = getApiUrl();
   if (!url) {
     document.getElementById('setupBanner').style.display = 'flex';
-    setLoading(false, 'Belum ada URL. Klik Setup API untuk mulai.');
+    setEmpty('Belum ada URL. Klik Setup API untuk mulai.');
     updateStats([]); return;
   }
   document.getElementById('setupBanner').style.display = 'none';
-  setLoading(true);
+  setLoading();
   try {
     const res = await fetch(url);
     const json = await res.json();
@@ -378,32 +526,27 @@ async function loadData() {
     renderAll(); updateStats(rows);
     showToast('Data berhasil dimuat ✓', 'success');
   } catch(err) {
-    setLoading(false, 'Gagal memuat: ' + err.message, true);
+    setEmpty('Gagal memuat: ' + err.message, true);
     updateStats([]);
   }
 }
 
-function setLoading(loading, msg, isError) {
-  const loadHTML = loading
-    ? `<tr><td colspan="8"><div class="state-box"><div class="spinner"></div><span class="state-title">Memuat data…</span></div></td></tr>`
-    : `<tr><td colspan="8"><div class="state-box">
-        ${isError ? '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>' : '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>'}
-        <span class="state-title">${isError ? 'Gagal memuat' : 'Belum ada data'}</span>
-        <p>${msg}</p>
-        ${isError ? '<button class="btn btn-ghost btn-sm" onclick="loadData()">Coba lagi</button>' : ''}
-       </div></td></tr>`;
-  document.getElementById('tableBody').innerHTML = loadHTML;
-  const cardLoad = loading
-    ? `<div class="state-box" style="padding:40px 0"><div class="spinner"></div><span class="state-title">Memuat data…</span></div>`
-    : `<div class="state-box" style="padding:40px 0">${isError ? '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>' : ''}<span class="state-title">${msg}</span></div>`;
-  document.getElementById('cardList').innerHTML = cardLoad;
+function setLoading() {
+  const s = `<tr><td colspan="8"><div class="state-box"><div class="spinner"></div><span class="state-title">Memuat data…</span></div></td></tr>`;
+  document.getElementById('tableBody').innerHTML = s;
+  document.getElementById('cardList').innerHTML = `<div class="state-box" style="padding:40px 0"><div class="spinner"></div><span class="state-title">Memuat data…</span></div>`;
 }
 
-function updateStats(data) {
-  const t = data.length, d = data.filter(r => String(r['Status']||'').toLowerCase()==='sudah chat').length;
-  document.getElementById('statTotal').textContent = t || '—';
-  document.getElementById('statDone').textContent = t ? d : '—';
-  document.getElementById('statPending').textContent = t ? (t-d) : '—';
+function setEmpty(msg, isErr) {
+  document.getElementById('tableBody').innerHTML = `<tr><td colspan="8"><div class="state-box"><span class="state-title">${isErr?'Gagal memuat':'Belum ada data'}</span><p>${msg}</p>${isErr?'<button class="btn btn-ghost btn-sm" onclick="loadData()">Coba lagi</button>':''}</div></td></tr>`;
+  document.getElementById('cardList').innerHTML = `<div class="state-box" style="padding:40px 0"><span class="state-title">${msg}</span></div>`;
+}
+
+function updateStats(d) {
+  const t = d.length, done = d.filter(r => String(r.Status||'').toLowerCase()==='sudah chat').length;
+  document.getElementById('statTotal').textContent = t||'—';
+  document.getElementById('statDone').textContent = t?done:'—';
+  document.getElementById('statPending').textContent = t?(t-done):'—';
 }
 
 function setFilter(f, el) {
@@ -415,11 +558,11 @@ function setFilter(f, el) {
 function filterRender() { renderAll(); }
 
 function getFiltered() {
-  const q = (document.getElementById('searchInput').value || '').toLowerCase();
+  const q = (document.getElementById('searchInput').value||'').toLowerCase();
   return rows.filter(r => {
-    const done = String(r['Status']||'').toLowerCase() === 'sudah chat';
-    const mf = currentFilter==='all' || (currentFilter==='done'&&done) || (currentFilter==='pending'&&!done);
-    const ms = !q || String(r['Nama Apparel']||'').toLowerCase().includes(q) || String(r['Lokasi']||'').toLowerCase().includes(q);
+    const done = String(r.Status||'').toLowerCase()==='sudah chat';
+    const mf = currentFilter==='all'||(currentFilter==='done'&&done)||(currentFilter==='pending'&&!done);
+    const ms = !q||String(r['Nama Apparel']||'').toLowerCase().includes(q)||String(r['Lokasi']||'').toLowerCase().includes(q);
     return mf && ms;
   });
 }
@@ -428,47 +571,58 @@ function buildWaUrl(kontak, pic) {
   return `https://wa.me/${kontak}?text=${encodeURIComponent(MSG(pic))}`;
 }
 
-function renderAll() {
-  renderTable(); renderCards();
+function renderLokasiCell(r) {
+  const nama = r['Lokasi']||'—';
+  const link = r['Link Maps']||r['link maps']||r['LinkMaps']||'';
+  if (link) return `<a class="lokasi-link" href="${link}" target="_blank" rel="noopener">${MAPS_SVG} ${nama}</a>`;
+  return `<span class="lokasi-text">${nama}</span>`;
 }
+
+function renderNameCell(r) {
+  const nama = r['Nama Apparel']||'—';
+  const ig = r['Instagram']||r['instagram']||r['Link Instagram']||r['link_instagram']||'';
+  if (ig) return `<a class="link-name vendor-name" href="${ig}" target="_blank" rel="noopener" title="Buka Instagram">${nama}</a>`;
+  return `<span class="vendor-name">${nama}</span>`;
+}
+
+function renderAll() { renderTable(); renderCards(); }
 
 function renderTable() {
   const filtered = getFiltered();
   const tbody = document.getElementById('tableBody');
   if (!filtered.length) {
-    tbody.innerHTML = `<tr><td colspan="8"><div class="state-box">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <span class="state-title">Tidak ada hasil</span><p>Coba ubah filter atau kata kunci</p></div></td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="8"><div class="state-box"><span class="state-title">Tidak ada hasil</span><p>Coba ubah filter atau kata kunci</p></div></td></tr>`;
     return;
   }
   tbody.innerHTML = filtered.map((r,i) => {
-    const done = String(r['Status']||'').toLowerCase() === 'sudah chat';
-    const pic = r['PIC'] || '';
+    const done = String(r.Status||'').toLowerCase()==='sudah chat';
+    const pic = r['PIC']||'';
     const kontak = String(r['Kontak']||'').replace(/\D/g,'');
-    const draft = picDraft[r._row] !== undefined ? picDraft[r._row] : pic;
-    const hasPic = draft.trim().length > 0;
+    const draft = picDraft[r._row]!==undefined ? picDraft[r._row] : pic;
+    const hasPic = draft.trim().length>0;
     const waUrl = hasPic ? buildWaUrl(kontak, draft.trim()) : '#';
+    const ig = r['Instagram']||r['instagram']||r['Link Instagram']||'';
     const hfp = r['Harga Full Print'] ? `<span class="price-val">${r['Harga Full Print']}</span>` : `<span class="price-na">—</span>`;
     const hsp = r['Harga Spec+'] ? `<span class="price-val">${r['Harga Spec+']}</span>` : `<span class="price-na">—</span>`;
     const ts = r['Waktu Chat'] ? `<div class="ts">${r['Waktu Chat']}</div>` : '';
     const picCell = done
-      ? `<div class="pic-locked"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>${pic}</div>`
+      ? `<div class="pic-locked"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> ${pic}</div>`
       : `<input class="pic-input" data-row="${r._row}" type="text" placeholder="Nama PIC" value="${draft.replace(/"/g,'&quot;')}" oninput="onPicInput(this)" autocomplete="off">`;
     const markBtn = done
-      ? `<button class="btn-mark btn-sm" disabled>✓ Chat</button>`
-      : `<button class="btn-mark btn-sm" data-row="${r._row}" onclick="markDone(this)"${!hasPic?' disabled title="Isi PIC dulu"':''}>Tandai</button>`;
+      ? `<button class="btn-mark btn-sm" disabled>✓</button>`
+      : `<button class="btn-mark btn-sm" data-row="${r._row}" onclick="markDone(this)"${!hasPic?' disabled':''}>Tandai</button>`;
+    const igBtn = ig ? `<a class="btn-ig" href="${ig}" target="_blank" rel="noopener" title="Lihat Instagram">${IG_SVG}</a>` : '';
     return `<tr class="${done?'is-done':''}" data-row="${r._row}">
       <td class="cell-no">${r['No']||(i+1)}</td>
-      <td class="cell-name"><strong>${r['Nama Apparel']||'—'}</strong><div class="sub">${kontak}</div></td>
-      <td><span class="badge badge-lokasi">${r['Lokasi']||'—'}</span></td>
-      <td>${hfp}</td>
-      <td>${hsp}</td>
+      <td>${renderNameCell(r)}<div class="vendor-sub">${kontak}</div></td>
+      <td>${renderLokasiCell(r)}</td>
+      <td>${hfp}</td><td>${hsp}</td>
       <td><span class="badge ${done?'badge-done':'badge-pending'}">${done?'✓ Sudah':'Belum'}</span>${ts}</td>
       <td>${picCell}</td>
       <td><div class="action-wrap">
-        <a class="btn-wa btn-sm" href="${hasPic||done?waUrl:'#'}" target="_blank" rel="noopener"${(!hasPic&&!done)?' style="pointer-events:none;opacity:.3"':''}>${WA_SVG} WA</a>
-        ${markBtn}
-        ${done?`<button class="btn-copy btn-sm" onclick="copyLink(this,'${waUrl.replace(/'/g,"\\'")}')">Salin</button>`:''}</div></td>
+        <a class="btn-wa" href="${(hasPic||done)?waUrl:'#'}" target="_blank" rel="noopener"${(!hasPic&&!done)?' style="pointer-events:none;opacity:.25"':''}>${WA_SVG} WA</a>
+        ${igBtn}${markBtn}
+      </div></td>
     </tr>`;
   }).join('');
 }
@@ -477,45 +631,44 @@ function renderCards() {
   const filtered = getFiltered();
   const list = document.getElementById('cardList');
   if (!filtered.length) {
-    list.innerHTML = `<div class="state-box" style="padding:40px 0"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><span class="state-title">Tidak ada hasil</span></div>`;
+    list.innerHTML = `<div class="state-box" style="padding:40px 0"><span class="state-title">Tidak ada hasil</span></div>`;
     return;
   }
   list.innerHTML = filtered.map((r,i) => {
-    const done = String(r['Status']||'').toLowerCase() === 'sudah chat';
-    const pic = r['PIC'] || '';
+    const done = String(r.Status||'').toLowerCase()==='sudah chat';
+    const pic = r['PIC']||'';
     const kontak = String(r['Kontak']||'').replace(/\D/g,'');
-    const draft = picDraft[r._row] !== undefined ? picDraft[r._row] : pic;
-    const hasPic = draft.trim().length > 0;
+    const draft = picDraft[r._row]!==undefined ? picDraft[r._row] : pic;
+    const hasPic = draft.trim().length>0;
     const waUrl = hasPic ? buildWaUrl(kontak, draft.trim()) : '#';
-    const hfp = r['Harga Full Print'] || '—';
-    const hsp = r['Harga Spec+'] || '—';
+    const ig = r['Instagram']||r['instagram']||r['Link Instagram']||'';
+    const hfp = r['Harga Full Print']||'—';
+    const hsp = r['Harga Spec+']||'—';
     const ts = r['Waktu Chat'] ? `<div class="vendor-card-ts">Dichat: ${r['Waktu Chat']}</div>` : '';
     const picField = done
-      ? `<div class="pic-locked" style="padding:8px 0;font-size:13px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>${pic}</div>`
+      ? `<div class="pic-locked" style="font-size:13px;padding:6px 0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> ${pic}</div>`
       : `<input class="pic-input-full" data-row="${r._row}" type="text" placeholder="Isi nama PIC…" value="${draft.replace(/"/g,'&quot;')}" oninput="onPicInputCard(this)" autocomplete="off">`;
     const markBtn = done
-      ? `<button class="btn-mark" style="flex:1;height:36px;display:inline-flex;align-items:center;justify-content:center;font-size:13px" disabled>✓ Sudah Chat</button>`
-      : `<button class="btn-mark" style="flex:1;height:36px;display:inline-flex;align-items:center;justify-content:center;font-size:13px" data-row="${r._row}" onclick="markDone(this)"${!hasPic?' disabled':''}>${hasPic?'✓ Tandai Chat':'Tandai Chat'}</button>`;
+      ? `<button class="btn-mark" style="flex:1;height:38px;display:inline-flex;align-items:center;justify-content:center;font-size:13px" disabled>✓ Sudah Chat</button>`
+      : `<button class="btn-mark" style="flex:1;height:38px;display:inline-flex;align-items:center;justify-content:center;font-size:13px" data-row="${r._row}" onclick="markDone(this)"${!hasPic?' disabled':''}>${hasPic?'✓ Tandai':'Tandai Chat'}</button>`;
+    const igBtn = ig ? `<a class="btn-ig" href="${ig}" target="_blank" rel="noopener" style="height:38px;font-size:12px;padding:0 12px;display:inline-flex;align-items:center;gap:4px">${IG_SVG} IG</a>` : '';
     return `<div class="vendor-card ${done?'is-done':''}" data-row="${r._row}">
       <div class="vendor-card-header">
         <div>
-          <div class="vendor-card-name">${r['Nama Apparel']||'—'}</div>
-          <div class="vendor-card-meta"><span class="badge badge-lokasi" style="margin-right:5px">${r['Lokasi']||'—'}</span>${kontak}</div>
+          <div class="vendor-card-name">${ig?`<a href="${ig}" target="_blank" rel="noopener" style="color:inherit">${r['Nama Apparel']||'—'}</a>`:r['Nama Apparel']||'—'}</div>
+          <div class="vendor-card-meta">${renderLokasiCell(r)}<span>·</span><span>${kontak}</span></div>
         </div>
-        <span class="badge ${done?'badge-done':'badge-pending'}">${done?'✓ Chat':'Belum'}</span>
+        <span class="badge ${done?'badge-done':'badge-pending'}">${done?'✓':'Belum'}</span>
       </div>
       <div class="vendor-card-prices">
         <div class="price-block"><div class="price-block-label">Full Print</div><div class="price-block-val">${hfp}</div></div>
         <div class="price-block"><div class="price-block-label">Spec+</div><div class="price-block-val">${hsp}</div></div>
       </div>
-      <div class="vendor-card-pic">
-        <div class="pic-label">Nama PIC</div>
-        ${picField}
-      </div>
+      <div class="vendor-card-pic"><div class="pic-label">Nama PIC</div>${picField}</div>
       <div class="vendor-card-actions">
-        <a class="btn-wa" href="${hasPic||done?waUrl:'#'}" target="_blank" rel="noopener"${(!hasPic&&!done)?' style="pointer-events:none;opacity:.3"':''}>${WA_SVG} Buka WA</a>
-        ${markBtn}
-        ${done?`<button class="btn-copy" onclick="copyLink(this,'${waUrl.replace(/'/g,"\\'")}')">Salin</button>`:''}</div>
+        <a class="btn-wa" href="${(hasPic||done)?waUrl:'#'}" target="_blank" rel="noopener"${(!hasPic&&!done)?' style="pointer-events:none;opacity:.25"':''} style="flex:1;justify-content:center;height:38px;font-size:13px;display:inline-flex;align-items:center;gap:5px">${WA_SVG} Buka WA</a>
+        ${igBtn}${markBtn}
+      </div>
       ${ts}
     </div>`;
   }).join('');
@@ -525,17 +678,14 @@ function onPicInput(input) {
   const row = +input.dataset.row;
   picDraft[row] = input.value;
   const tr = input.closest('tr');
-  const hasPic = input.value.trim().length > 0;
+  const hasPic = input.value.trim().length>0;
   const mb = tr.querySelector('.btn-mark');
-  if (mb) { mb.disabled = !hasPic; mb.title = hasPic?'':'Isi PIC dulu'; }
+  if (mb) mb.disabled = !hasPic;
   const wa = tr.querySelector('.btn-wa');
   if (wa) {
     const rd = rows.find(r => r._row===row);
-    if (rd && hasPic) {
-      const k = String(rd['Kontak']||'').replace(/\D/g,'');
-      wa.href = buildWaUrl(k, input.value.trim());
-      wa.style = '';
-    } else { wa.href='#'; wa.style='pointer-events:none;opacity:.3'; }
+    if (rd&&hasPic) { wa.href=buildWaUrl(String(rd['Kontak']||'').replace(/\D/g,''),input.value.trim()); wa.style=''; }
+    else { wa.href='#'; wa.style='pointer-events:none;opacity:.25'; }
   }
 }
 
@@ -543,17 +693,14 @@ function onPicInputCard(input) {
   const row = +input.dataset.row;
   picDraft[row] = input.value;
   const card = input.closest('.vendor-card');
-  const hasPic = input.value.trim().length > 0;
+  const hasPic = input.value.trim().length>0;
   const mb = card.querySelector('.btn-mark');
-  if (mb) { mb.disabled = !hasPic; mb.textContent = hasPic ? '✓ Tandai Chat' : 'Tandai Chat'; }
+  if (mb) { mb.disabled=!hasPic; mb.textContent=hasPic?'✓ Tandai':'Tandai Chat'; }
   const wa = card.querySelector('.btn-wa');
   if (wa) {
     const rd = rows.find(r => r._row===row);
-    if (rd && hasPic) {
-      const k = String(rd['Kontak']||'').replace(/\D/g,'');
-      wa.href = buildWaUrl(k, input.value.trim());
-      wa.style = '';
-    } else { wa.href='#'; wa.style='pointer-events:none;opacity:.3'; }
+    if (rd&&hasPic) { wa.href=buildWaUrl(String(rd['Kontak']||'').replace(/\D/g,''),input.value.trim()); wa.removeAttribute('style'); wa.style.cssText='flex:1;justify-content:center;height:38px;font-size:13px;display:inline-flex;align-items:center;gap:5px'; }
+    else { wa.href='#'; wa.style.cssText='flex:1;justify-content:center;height:38px;font-size:13px;display:inline-flex;align-items:center;gap:5px;pointer-events:none;opacity:.25'; }
   }
 }
 
@@ -561,50 +708,34 @@ async function markDone(btn) {
   const row = +btn.dataset.row;
   const rd = rows.find(r => r._row===row);
   if (!rd) return;
-  const pic = (picDraft[row]!==undefined ? picDraft[row] : rd['PIC']||'').trim();
-  if (!pic) { showToast('Isi nama PIC dulu!', 'error'); return; }
-  btn.disabled = true; btn.textContent = '…';
+  const pic = (picDraft[row]!==undefined?picDraft[row]:rd['PIC']||'').trim();
+  if (!pic) { showToast('Isi nama PIC dulu!','error'); return; }
+  btn.disabled=true; btn.textContent='…';
   const ts = new Date().toLocaleString('id-ID',{timeZone:'Asia/Jakarta',day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
-  const url = getApiUrl();
   try {
-    if (url) await fetch(url, {method:'POST', body: JSON.stringify({row, pic, status:'Sudah Chat', timestamp:ts}), headers:{'Content-Type':'text/plain'}});
+    const url = getApiUrl();
+    if (url) await fetch(url,{method:'POST',body:JSON.stringify({row,pic,status:'Sudah Chat',timestamp:ts}),headers:{'Content-Type':'text/plain'}});
     rd['PIC']=pic; rd['Status']='Sudah Chat'; rd['Waktu Chat']=ts;
     delete picDraft[row];
     renderAll(); updateStats(rows);
-    showToast(`${rd['Nama Apparel']} ditandai sudah chat ✓`, 'success');
-  } catch(err) {
-    btn.disabled=false; btn.textContent='Tandai';
-    showToast('Gagal: '+err.message, 'error');
-  }
-}
-
-function copyLink(btn, url) {
-  navigator.clipboard.writeText(url).then(() => {
-    btn.textContent='✓ Disalin'; btn.classList.add('copied');
-    setTimeout(()=>{ btn.textContent='Salin'; btn.classList.remove('copied'); }, 2000);
-  }).catch(()=>showToast('Gagal menyalin','error'));
+    showToast(`${rd['Nama Apparel']} ditandai sudah chat ✓`,'success');
+  } catch(err) { btn.disabled=false; btn.textContent='Tandai'; showToast('Gagal: '+err.message,'error'); }
 }
 
 function showToast(msg, type='default') {
   const c = document.getElementById('toastContainer');
   const t = document.createElement('div');
-  t.className = `toast ${type}`; t.textContent = msg;
-  c.appendChild(t);
+  t.className=`toast ${type}`; t.textContent=msg; c.appendChild(t);
   setTimeout(()=>{ t.style.cssText='opacity:0;transform:translateY(8px);transition:all .2s'; setTimeout(()=>t.remove(),200); },3000);
 }
 
 (function(){
-  const btn = document.querySelector('[data-theme-toggle]'), r = document.documentElement;
-  const moon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-  const sun = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-  let d = localStorage.getItem('snfc_theme') || (matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
-  r.setAttribute('data-theme',d); if(btn) btn.innerHTML = d==='dark'?sun:moon;
-  btn && btn.addEventListener('click',()=>{
-    d = d==='dark'?'light':'dark';
-    r.setAttribute('data-theme',d);
-    localStorage.setItem('snfc_theme',d);
-    btn.innerHTML = d==='dark'?sun:moon;
-  });
+  const btn=document.querySelector('[data-theme-toggle]'),r=document.documentElement;
+  const moon='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  const sun='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+  let d=localStorage.getItem('snfc_theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  r.setAttribute('data-theme',d); if(btn) btn.innerHTML=d==='dark'?sun:moon;
+  btn&&btn.addEventListener('click',()=>{ d=d==='dark'?'light':'dark'; r.setAttribute('data-theme',d); localStorage.setItem('snfc_theme',d); btn.innerHTML=d==='dark'?sun:moon; });
 })();
 
 loadData();
