@@ -153,9 +153,8 @@ th:not(.sort-asc):not(.sort-desc) .sort-arr::after{content:'↕';opacity:.35}
 td{padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:middle}
 tbody tr:last-child td{border-bottom:none}
 tbody tr{transition:background var(--t)}tbody tr:hover{background:var(--surface-2)}
-tbody tr.done{background:color-mix(in srgb,var(--success-bg) 60%,transparent)}
-tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transparent)}
-[data-theme="dark"] tbody tr.done{background:rgba(31,193,107,.05)}
+tbody tr.done:hover{background:var(--surface-2)}
+
 .cell-no{width:36px;font-size:11px;font-weight:500;color:var(--text-3);text-align:center}
 .vname{font-weight:600;font-size:13px;letter-spacing:-.02em}
 .vname-lnk:hover{color:#e1306c}
@@ -167,11 +166,12 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
 .loc-txt{font-size:12px;color:var(--text-2)}
 .badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:var(--r-sm);font-size:11px;font-weight:500;white-space:nowrap}
 .b-done{background:var(--success-bg);color:var(--success);border:1px solid var(--success-border)}
-.b-pend{background:var(--surface-2);color:var(--text-3);border:1px solid var(--border)}
+.b-pend{background:var(--error-bg);color:var(--error);border:1px solid rgba(239,68,68,.18)}
 .b-bisa{background:#eff6ff;color:#3b82f6;border:1px solid rgba(59,130,246,.2)}
 .b-tidak{background:var(--error-bg);color:var(--error);border:1px solid rgba(239,68,68,.18)}
 [data-theme="dark"] .b-bisa{background:rgba(59,130,246,.1);color:#60a5fa}
 [data-theme="dark"] .b-tidak{background:rgba(239,68,68,.1);color:#f87171}
+[data-theme="dark"] .b-pend{background:rgba(239,68,68,.1);color:#f87171}
 .pic-inp{height:28px;padding:0 9px;width:120px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--bg);color:var(--text);font-size:12px;font-family:var(--font);transition:border-color var(--t)}
 .pic-inp:focus{outline:none;border-color:var(--text)}
 .pic-inp:disabled{opacity:.35;cursor:not-allowed;background:var(--surface-2)}
@@ -192,8 +192,7 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
 /* MOBILE CARDS */
 .cards{display:none;flex-direction:column;gap:10px}
 .vcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-2xl);padding:16px;box-shadow:var(--sh-card)}
-.vcard.done{background:color-mix(in srgb,var(--success-bg) 40%,var(--surface))}
-[data-theme="dark"] .vcard.done{background:rgba(31,193,107,.04)}
+.vcard.done{background:var(--surface)}
 .vc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:12px}
 .vc-title{font-size:15px;font-weight:700;letter-spacing:-.03em}
 .vc-meta{font-size:12px;color:var(--text-3);margin-top:3px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
@@ -248,6 +247,22 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
   .fp-row{grid-template-columns:1fr}
   .lu-pill{display:none}
 }
+
+/* CHEAPEST CARDS */
+.cheap-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.cheap-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:16px 18px;box-shadow:var(--sh-sm);position:relative;overflow:hidden}
+.cheap-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cheap-card.fp::before{background:linear-gradient(90deg,#3b82f6,#6366f1)}
+.cheap-card.sp::before{background:linear-gradient(90deg,#8b5cf6,#ec4899)}
+.cheap-lbl{font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.cheap-price{font-size:22px;font-weight:700;letter-spacing:-.04em;line-height:1;margin-bottom:6px}
+.cheap-price.fp{color:#3b82f6}.cheap-price.sp{color:#8b5cf6}
+.cheap-name{font-size:13px;font-weight:600;letter-spacing:-.02em;margin-bottom:5px}
+.cheap-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.cheap-info{font-size:11px;color:var(--text-3);display:inline-flex;align-items:center;gap:3px}
+.cheap-none{font-size:12px;color:var(--text-3);padding:6px 0}
+@media(max-width:480px){.cheap-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -284,13 +299,30 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
     <div class="stat"><div class="stat-lbl">Belum Chat</div><div class="stat-val a" id="sPend">—</div><div class="stat-ft">vendor</div></div>
   </div>
 
+
+  <div class="cheap-grid" id="cheapGrid">
+    <div class="cheap-card fp">
+      <div class="cheap-lbl">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        Termurah Full Print
+      </div>
+      <div id="cfp"><div class="cheap-none">Memuat…</div></div>
+    </div>
+    <div class="cheap-card sp">
+      <div class="cheap-lbl">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        Termurah Spec+
+      </div>
+      <div id="csp"><div class="cheap-none">Memuat…</div></div>
+    </div>
+  </div>
   <div class="tpl">
     <div class="tpl-lbl">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="#22c55e"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 0C5.365 0 0 5.364 0 11.988c0 2.123.558 4.12 1.532 5.851L.06 23.765a.5.5 0 0 0 .613.634l6.107-1.61A11.947 11.947 0 0 0 11.99 24C18.617 24 24 18.636 24 12.012 24 5.364 18.617 0 11.99 0zm0 21.818a9.836 9.836 0 0 1-5.022-1.369l-.36-.214-3.728.982.997-3.645-.234-.374A9.818 9.818 0 0 1 2.182 12c0-5.412 4.398-9.818 9.808-9.818 5.412 0 9.829 4.406 9.829 9.818 0 5.414-4.417 9.818-9.829 9.818z"/></svg>
       Template Pesan WA ke Vendor
     </div>
     <div class="tpl-step">① Pembuka — Minta Pricelist</div>
-    <div class="tpl-body" style="margin-bottom:14px">"Halo, perkenalkan saya <strong>[Nama PIC]</strong> dari tim SISA NAFAS FC (@sisanafas.fc). Kami sedang mencari vendor untuk pembuatan custom jersey tim. Boleh minta pricelist terbarunya? Terima kasih"</div>
+    <div class="tpl-body" style="margin-bottom:14px">"Halo, perkenalkan saya <strong>[Nama PIC]</strong> dari tim SISA NAFAS FC (@sisanafas.fc). Mau nanya terkait custom jersey. Boleh minta pricelist terbarunya? Terima kasih"</div>
     <div class="tpl-divider"></div>
     <div class="tpl-step">② Lanjutan — Tanya Pecah Pola</div>
     <div class="tpl-row">
@@ -328,7 +360,7 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
           <div class="csel-menu" id="csel-status-menu">
             <div class="csel-opt selected" data-val="" onclick="setCsel('csel-status','Status','','Semua Status')"><span class="csel-check"><svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Semua Status</div>
             <div class="csel-sep"></div>
-            <div class="csel-opt" data-val="Sudah Chat" onclick="setCsel('csel-status','Status','Sudah Chat','✓ Sudah Chat')"><span class="csel-check"><svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span class="csel-dot" style="background:var(--success)"></span>✓ Sudah Chat</div>
+            <div class="csel-opt" data-val="Sudah Chat" onclick="setCsel('csel-status','Status','Sudah Chat','Sudah Chat')"><span class="csel-check"><svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span class="csel-dot" style="background:var(--success)"></span>Sudah Chat</div>
             <div class="csel-opt" data-val="Belum Chat" onclick="setCsel('csel-status','Status','Belum Chat','Belum Chat')"><span class="csel-check"><svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span class="csel-dot" style="background:var(--text-3)"></span>Belum Chat</div>
           </div>
         </div>
@@ -400,10 +432,10 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
 // ⚙️  KONFIGURASI — Edit bagian ini saja
 //     API_URL → URL Apps Script kamu (dari Deploy → Copy /exec URL)
 // ════════════════════════════════════════════════════════
-const API_URL = "https://script.google.com/macros/s/AKfycbzJqX1MeWhd9T1cqvwGHz4zx-AbC3VLnx1ZdgwmO_0zy_2lKW8gdJsRDg-9p_KJw5OH/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbyWE0HDnds4_pYXaaVnQikvuvMj2cHo4hCUySUQSUOSFl0QSn5x1LhyAFXPE3qjVqm6/exec";
 // ════════════════════════════════════════════════════════
 
-const WATEXT = p=>`Halo, perkenalkan saya ${p} dari tim SISA NAFAS FC (@sisanafas.fc). Kami sedang mencari vendor untuk pembuatan custom jersey tim. Boleh minta pricelist terbarunya? Terima kasih`;
+const WATEXT = p=>`Halo, perkenalkan saya ${p} dari tim SISA NAFAS FC (@sisanafas.fc). Mau nanya terkait custom jersey. Boleh minta pricelist terbarunya? Terima kasih`;
 const CHKSVG = `<svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>`;
 const WAICO  = `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 0C5.365 0 0 5.364 0 11.988c0 2.123.558 4.12 1.532 5.851L.06 23.765a.5.5 0 0 0 .613.634l6.107-1.61A11.947 11.947 0 0 0 11.99 24C18.617 24 24 18.636 24 12.012 24 5.364 18.617 0 11.99 0zm0 21.818a9.836 9.836 0 0 1-5.022-1.369l-.36-.214-3.728.982.997-3.645-.234-.374A9.818 9.818 0 0 1 2.182 12c0-5.412 4.398-9.818 9.808-9.818 5.412 0 9.829 4.406 9.829 9.818 0 5.414-4.417 9.818-9.829 9.818z"/></svg>`;
 const IGICO  = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`;
@@ -481,6 +513,45 @@ function setEmpty(msg, err) {
 function updateStats(d) {
   const t=d.length, dn=d.filter(isDone).length;
   ['sTotal','sDone','sPend'].forEach((id,i) => document.getElementById(id).textContent = t ? [t,dn,t-dn][i] : '—');
+  updateCheap(d);
+}
+
+function parsePx(v) {
+  if (!v) return null;
+  const n = String(v).replace(/[^0-9]/g,'');
+  return n ? parseInt(n) : null;
+}
+
+function cheapInner(r, priceKey, cls) {
+  if (!r) return '<div class="cheap-none">Data belum tersedia</div>';
+  const price = r[priceKey] || '—';
+  const loc   = r['Lokasi'] || '—';
+  const pic   = r['PIC'] && String(r['PIC']).trim();
+  const pp    = String(r['Bisa Pecah Pola?']||'').trim().toLowerCase();
+  const ppBadge = pp==='bisa'||pp==='ya'
+    ? '<span class="badge b-bisa" style="font-size:10px">✓ Bisa PP</span>'
+    : pp.includes('tidak')
+      ? '<span class="badge b-tidak" style="font-size:10px">✗ No PP</span>'
+      : '';
+  const mh = mapsLink(r);
+  const locEl = mh
+    ? `<a class="cheap-info maps-lnk" href="${mh}" target="_blank" rel="noopener">${MAPICO} ${loc}</a>`
+    : `<span class="cheap-info">${MAPICO} ${loc}</span>`;
+  const picEl = pic
+    ? `<span class="cheap-info"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> ${pic}</span>`
+    : '';
+  return `<div class="cheap-price ${cls}">${price}</div>
+<div class="cheap-name">${r['Nama Apparel']||'—'}</div>
+<div class="cheap-meta">${locEl}${picEl}${ppBadge}</div>`;
+}
+
+function updateCheap(d) {
+  const fp = d.map(r=>({r,v:parsePx(r['Harga Full Print'])})).filter(x=>x.v!==null);
+  const sp = d.map(r=>({r,v:parsePx(r['Harga Spec +'])})).filter(x=>x.v!==null);
+  const cFP = fp.length ? fp.reduce((a,b)=>a.v<=b.v?a:b).r : null;
+  const cSP = sp.length ? sp.reduce((a,b)=>a.v<=b.v?a:b).r : null;
+  document.getElementById('cfp').innerHTML = cheapInner(cFP,'Harga Full Print','fp');
+  document.getElementById('csp').innerHTML = cheapInner(cSP,'Harga Spec +','sp');
 }
 
 function addPicDone(name) {
@@ -646,7 +717,7 @@ function renderTable() {
       <td>${hfp}</td>
       <td>${hsp}</td>
       <td>${ppolaHTML(r)}</td>
-      <td><span class="badge ${dn?'b-done':'b-pend'}">${dn?'✓ Sudah':'Belum'}</span>${ts}</td>
+      <td><span class="badge ${dn?'b-done':'b-pend'}">${dn?'Sudah':'Belum'}</span>${ts}</td>
       <td>${picCell}</td>
       <td><div class="acts">
         <a class="btn-wa ${(!p&&!dn)?'dis':''}" data-wa="${r._row}" href="${(p||dn)?waHref(r,p):'#'}" target="_blank" rel="noopener">${WAICO} WA</a>
@@ -690,7 +761,7 @@ function renderCards() {
           <div class="vc-title">${r['Nama Apparel']||'—'}</div>
           <div class="vc-meta">${lokasiHTML(r)}<span>·</span><span>${phone(r)}</span></div>
         </div>
-        <span class="badge ${dn?'b-done':'b-pend'}">${dn?'✓':'Belum'}</span>
+        <span class="badge ${dn?'b-done':'b-pend'}">${dn?'Sudah':'Belum'}</span>
       </div>
       ${links ? `<div class="vc-links">${links}</div>` : ''}
       <div class="vc-grid">
@@ -702,7 +773,7 @@ function renderCards() {
       <div class="vc-acts">
         <a class="btn-wa ${waD}" data-wa="${r._row}" href="${(p||dn)?waHref(r,p):'#'}" target="_blank" rel="noopener" style="${flex38}">${WAICO} Buka WA</a>
         ${dn
-          ? `<button class="btn-mark" style="${flex38}" disabled>✓ Sudah Chat</button>`
+          ? `<button class="btn-mark" style="${flex38}" disabled>Sudah Chat</button>`
           : `<button class="btn-mark" style="${flex38}" data-row="${r._row}" onclick="markDone(this)"${!p?' disabled':''}>Tandai Chat</button>`
         }
       </div>
