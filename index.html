@@ -432,7 +432,7 @@ tbody tr.done:hover{background:var(--surface-2)}
 // ⚙️  KONFIGURASI — Edit bagian ini saja
 //     API_URL → URL Apps Script kamu (dari Deploy → Copy /exec URL)
 // ════════════════════════════════════════════════════════
-const API_URL = "https://script.google.com/macros/s/AKfycbyWE0HDnds4_pYXaaVnQikvuvMj2cHo4hCUySUQSUOSFl0QSn5x1LhyAFXPE3qjVqm6/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbx2eiRxUdjPGBlKpcA9Ts61ijOOQ6iyjLHMlVpPbT313XNryzhYtzj8Fx1I95l3f_0A/exec";
 // ════════════════════════════════════════════════════════
 
 const WATEXT = p=>`Halo, perkenalkan saya ${p} dari tim SISA NAFAS FC (@sisanafas.fc). Mau nanya terkait custom jersey. Boleh minta pricelist terbarunya? Terima kasih`;
@@ -451,7 +451,7 @@ const phone  = r => String(r['Kontak']||'').replace(/[^0-9]/g,'');
 const waHref = (r,p) => `https://wa.me/${phone(r)}?text=${encodeURIComponent(WATEXT(p))}`;
 // Link kolom — cek beberapa kemungkinan nama
 const igLink   = r => r['__igLink__'] || r['Instagram'] || r['Link Instagram'] || '';
-const mapsLink = r => r['__mapsLink__'] || r['Link Maps'] || r['Maps'] || '';
+const mapsLink = r => r['__mapsLink__'] || r['Alamat'] || r['Link Maps'] || r['Maps'] || '';
 
 // ── COPY TEMPLATE ──
 function copyTpl() {
