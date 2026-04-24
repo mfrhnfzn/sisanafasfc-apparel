@@ -396,10 +396,12 @@ tbody tr.done:hover{background:color-mix(in srgb,var(--success-bg) 90%,transpare
 <div class="toasts" id="toasts"></div>
 
 <script>
-// ─────────────────────────────────────────────
-// BARIS 3: Ganti URL di sini jika Apps Script di-redeploy
+// ════════════════════════════════════════════════════════
+// ⚙️  KONFIGURASI — Edit bagian ini saja
+//     API_URL → URL Apps Script kamu (dari Deploy → Copy /exec URL)
+// ════════════════════════════════════════════════════════
 const API_URL = "https://script.google.com/macros/s/AKfycbyWE0HDnds4_pYXaaVnQikvuvMj2cHo4hCUySUQSUOSFl0QSn5x1LhyAFXPE3qjVqm6/exec";
-// ─────────────────────────────────────────────
+// ════════════════════════════════════════════════════════
 
 const WATEXT = p=>`Halo, perkenalkan saya ${p} dari tim SISA NAFAS FC (@sisanafas.fc). Kami sedang mencari vendor untuk pembuatan custom jersey tim. Boleh minta pricelist terbarunya? Terima kasih 🙏`;
 const CHKSVG = `<svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>`;
@@ -416,8 +418,8 @@ const isDone = r => String(r['Status']||'').toLowerCase().includes('sudah');
 const phone  = r => String(r['Kontak']||'').replace(/[^0-9]/g,'');
 const waHref = (r,p) => `https://wa.me/${phone(r)}?text=${encodeURIComponent(WATEXT(p))}`;
 // Link kolom — cek beberapa kemungkinan nama
-const igLink   = r => r['__igLink__'] || '';
-const mapsLink = r => r['__mapsLink__'] || '';
+const igLink   = r => r['__igLink__'] || r['Instagram'] || r['Link Instagram'] || '';
+const mapsLink = r => r['__mapsLink__'] || r['Link Maps'] || r['Maps'] || '';
 
 // ── COPY TEMPLATE ──
 function copyTpl() {
