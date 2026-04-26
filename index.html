@@ -144,13 +144,13 @@ a{text-decoration:none;color:inherit}
 .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 table{width:100%;border-collapse:collapse;font-size:13px}
 thead{background:var(--surface-2);border-bottom:1px solid var(--border)}
-th{padding:10px 14px;text-align:left;font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);white-space:nowrap;user-select:none}
+th{padding:8px 10px;text-align:left;font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);white-space:nowrap;user-select:none}
 th.sortable{cursor:pointer;transition:color var(--t)}th.sortable:hover{color:var(--text-2)}
 th.sort-asc,th.sort-desc{color:var(--text)}
 .sort-arr{display:inline-block;margin-left:4px;font-size:10px}
 th.sort-asc .sort-arr::after{content:'↑'}th.sort-desc .sort-arr::after{content:'↓'}
 th:not(.sort-asc):not(.sort-desc) .sort-arr::after{content:'↕';opacity:.35}
-td{padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:middle}
+td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
 tbody tr:last-child td{border-bottom:none}
 tbody tr{transition:background var(--t)}tbody tr:hover{background:var(--surface-2)}
 tbody tr.done:hover{background:var(--surface-2)}
@@ -161,6 +161,8 @@ tbody tr.done:hover{background:var(--surface-2)}
 .vcontact{font-size:11px;color:var(--text-3);margin-top:1px}
 .price{font-size:12px;font-weight:500;color:var(--text-2)}
 .price-na{font-size:11px;color:var(--text-3)}
+.price-stack{display:flex;flex-direction:column;gap:2px}
+.price-sub{font-size:10px;color:var(--text-3);font-weight:400}
 .ts{font-size:10px;color:var(--text-3);margin-top:2px}
 .maps-lnk{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:500;color:var(--info);transition:opacity var(--t)}.maps-lnk:hover{opacity:.7}
 .loc-txt{font-size:12px;color:var(--text-2)}
@@ -323,14 +325,14 @@ tbody tr.done:hover{background:var(--surface-2)}
     <div class="cheap-card fp2">
       <div class="cheap-lbl">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-        Termurah FP 2J1C
+        Termurah Full Print 2 Jersey 1 Celana
       </div>
       <div id="cfp2"><div class="cheap-none">Memuat…</div></div>
     </div>
     <div class="cheap-card sp2">
       <div class="cheap-lbl">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-        Termurah Spec+ 2J1C
+        Termurah Spec+ 2 Jersey 1 Celana
       </div>
       <div id="csp2"><div class="cheap-none">Memuat…</div></div>
     </div>
@@ -428,8 +430,6 @@ tbody tr.done:hover{background:var(--surface-2)}
           <th class="sortable" data-col="Lokasi" onclick="sortBy(this)">Lokasi <span class="sort-arr"></span></th>
           <th class="sortable" data-col="Harga Full Print" onclick="sortBy(this)">Full Print <span class="sort-arr"></span></th>
           <th class="sortable" data-col="Harga Spec +" onclick="sortBy(this)">Spec+ <span class="sort-arr"></span></th>
-          <th class="sortable" data-col="Full Print - 2J 1C" onclick="sortBy(this)">FP 2J1C <span class="sort-arr"></span></th>
-          <th class="sortable" data-col="Spec+ - 2J 1C" onclick="sortBy(this)">Spec+ 2J1C <span class="sort-arr"></span></th>
           <th class="sortable" data-col="Bisa Pecah Pola?" onclick="sortBy(this)">Pecah Pola <span class="sort-arr"></span></th>
           <th class="sortable" data-col="Status" onclick="sortBy(this)">Status <span class="sort-arr"></span></th>
           <th>PIC</th>
@@ -732,14 +732,18 @@ function renderTable() {
   tb.innerHTML = fd.map((r, i) => {
     const dn = isDone(r), p = r['PIC']||'';
     const ig = igLink(r), maps = mapsLink(r);
-    const _rfp = formatRp(r['Harga Full Print']);
-    const hfp = _rfp !== null ? `<span class="price">${_rfp}</span>` : `<span class="price-na">—</span>`;
-    const _rsp = formatRp(r['Harga Spec +']);
-    const hsp = _rsp !== null ? `<span class="price">${_rsp}</span>` : `<span class="price-na">—</span>`;
+    const _rfp  = formatRp(r['Harga Full Print']);
     const _rfp2 = formatRp(r['Full Print - 2J 1C']);
-    const hfp2 = _rfp2 !== null ? `<span class="price">${_rfp2}</span>` : `<span class="price-na">—</span>`;
+    const hfp = `<div class="price-stack">
+      ${_rfp  !== null ? `<span class="price">${_rfp}</span>`   : `<span class="price-na">—</span>`}
+      ${_rfp2 !== null ? `<span class="price-sub">2J1C: ${_rfp2}</span>` : ''}
+    </div>`;
+    const _rsp  = formatRp(r['Harga Spec +']);
     const _rsp2 = formatRp(r['Spec+ - 2J 1C']);
-    const hsp2 = _rsp2 !== null ? `<span class="price">${_rsp2}</span>` : `<span class="price-na">—</span>`;
+    const hsp = `<div class="price-stack">
+      ${_rsp  !== null ? `<span class="price">${_rsp}</span>`   : `<span class="price-na">—</span>`}
+      ${_rsp2 !== null ? `<span class="price-sub">2J1C: ${_rsp2}</span>` : ''}
+    </div>`;
     const ts  = r['Waktu Chat']       ? `<div class="ts">${r['Waktu Chat']}</div>` : '';
 
     // Nama: plain, IG badge di samping nomor hp
@@ -756,8 +760,6 @@ function renderTable() {
       <td>${lokasiHTML(r)}</td>
       <td>${hfp}</td>
       <td>${hsp}</td>
-      <td>${hfp2}</td>
-      <td>${hsp2}</td>
       <td>${ppolaHTML(r)}</td>
       <td><span class="badge ${dn?'b-done':'b-pend'}">${dn?'Sudah':'Belum'}</span>${ts}</td>
       <td>${picCell}</td>
