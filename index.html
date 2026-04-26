@@ -250,18 +250,21 @@ tbody tr.done:hover{background:var(--surface-2)}
 
 /* CHEAPEST CARDS */
 .cheap-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.cheap-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
 .cheap-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:16px 18px;box-shadow:var(--sh-sm);position:relative;overflow:hidden}
 .cheap-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
 .cheap-card.fp::before{background:linear-gradient(90deg,#3b82f6,#6366f1)}
 .cheap-card.sp::before{background:linear-gradient(90deg,#8b5cf6,#ec4899)}
+.cheap-card.fp2::before{background:linear-gradient(90deg,#0891b2,#06b6d4)}
+.cheap-card.sp2::before{background:linear-gradient(90deg,#7c3aed,#a855f7)}
 .cheap-lbl{font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:8px;display:flex;align-items:center;gap:5px}
 .cheap-price{font-size:22px;font-weight:700;letter-spacing:-.04em;line-height:1;margin-bottom:6px}
-.cheap-price.fp{color:#3b82f6}.cheap-price.sp{color:#8b5cf6}
+.cheap-price.fp{color:#3b82f6}.cheap-price.sp{color:#8b5cf6}.cheap-price.fp2{color:#0891b2}.cheap-price.sp2{color:#7c3aed}
 .cheap-name{font-size:13px;font-weight:600;letter-spacing:-.02em;margin-bottom:5px}
 .cheap-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .cheap-info{font-size:11px;color:var(--text-3);display:inline-flex;align-items:center;gap:3px}
 .cheap-none{font-size:12px;color:var(--text-3);padding:6px 0}
-@media(max-width:480px){.cheap-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.cheap-grid,.cheap-grid-2{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -314,6 +317,22 @@ tbody tr.done:hover{background:var(--surface-2)}
         Termurah Spec+
       </div>
       <div id="csp"><div class="cheap-none">Memuat…</div></div>
+    </div>
+  </div>
+  <div class="cheap-grid-2">
+    <div class="cheap-card fp2">
+      <div class="cheap-lbl">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        Termurah FP 2J1C
+      </div>
+      <div id="cfp2"><div class="cheap-none">Memuat…</div></div>
+    </div>
+    <div class="cheap-card sp2">
+      <div class="cheap-lbl">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        Termurah Spec+ 2J1C
+      </div>
+      <div id="csp2"><div class="cheap-none">Memuat…</div></div>
     </div>
   </div>
   <div class="tpl">
@@ -409,6 +428,8 @@ tbody tr.done:hover{background:var(--surface-2)}
           <th class="sortable" data-col="Lokasi" onclick="sortBy(this)">Lokasi <span class="sort-arr"></span></th>
           <th class="sortable" data-col="Harga Full Print" onclick="sortBy(this)">Full Print <span class="sort-arr"></span></th>
           <th class="sortable" data-col="Harga Spec +" onclick="sortBy(this)">Spec+ <span class="sort-arr"></span></th>
+          <th class="sortable" data-col="Full Print - 2J 1C" onclick="sortBy(this)">FP 2J1C <span class="sort-arr"></span></th>
+          <th class="sortable" data-col="Spec+ - 2J 1C" onclick="sortBy(this)">Spec+ 2J1C <span class="sort-arr"></span></th>
           <th class="sortable" data-col="Bisa Pecah Pola?" onclick="sortBy(this)">Pecah Pola <span class="sort-arr"></span></th>
           <th class="sortable" data-col="Status" onclick="sortBy(this)">Status <span class="sort-arr"></span></th>
           <th>PIC</th>
@@ -553,12 +574,18 @@ function cheapInner(r, priceKey, cls) {
 }
 
 function updateCheap(d) {
-  const fp = d.map(r=>({r,v:parsePx(r['Harga Full Print'])})).filter(x=>x.v!==null);
-  const sp = d.map(r=>({r,v:parsePx(r['Harga Spec +'])})).filter(x=>x.v!==null);
-  const cFP = fp.length ? fp.reduce((a,b)=>a.v<=b.v?a:b).r : null;
-  const cSP = sp.length ? sp.reduce((a,b)=>a.v<=b.v?a:b).r : null;
-  document.getElementById('cfp').innerHTML = cheapInner(cFP,'Harga Full Print','fp');
-  document.getElementById('csp').innerHTML = cheapInner(cSP,'Harga Spec +','sp');
+  const fp  = d.map(r=>({r,v:parsePx(r['Harga Full Print'])})).filter(x=>x.v!==null);
+  const sp  = d.map(r=>({r,v:parsePx(r['Harga Spec +'])})).filter(x=>x.v!==null);
+  const fp2 = d.map(r=>({r,v:parsePx(r['Full Print - 2J 1C'])})).filter(x=>x.v!==null);
+  const sp2 = d.map(r=>({r,v:parsePx(r['Spec+ - 2J 1C'])})).filter(x=>x.v!==null);
+  const cFP  = fp.length  ? fp.reduce((a,b)=>a.v<=b.v?a:b).r  : null;
+  const cSP  = sp.length  ? sp.reduce((a,b)=>a.v<=b.v?a:b).r  : null;
+  const cFP2 = fp2.length ? fp2.reduce((a,b)=>a.v<=b.v?a:b).r : null;
+  const cSP2 = sp2.length ? sp2.reduce((a,b)=>a.v<=b.v?a:b).r : null;
+  document.getElementById('cfp').innerHTML  = cheapInner(cFP,  'Harga Full Print',    'fp');
+  document.getElementById('csp').innerHTML  = cheapInner(cSP,  'Harga Spec +',        'sp');
+  document.getElementById('cfp2').innerHTML = cheapInner(cFP2, 'Full Print - 2J 1C',  'fp2');
+  document.getElementById('csp2').innerHTML = cheapInner(cSP2, 'Spec+ - 2J 1C',       'sp2');
 }
 
 function addPicDone(name) {
@@ -709,6 +736,10 @@ function renderTable() {
     const hfp = _rfp !== null ? `<span class="price">${_rfp}</span>` : `<span class="price-na">—</span>`;
     const _rsp = formatRp(r['Harga Spec +']);
     const hsp = _rsp !== null ? `<span class="price">${_rsp}</span>` : `<span class="price-na">—</span>`;
+    const _rfp2 = formatRp(r['Full Print - 2J 1C']);
+    const hfp2 = _rfp2 !== null ? `<span class="price">${_rfp2}</span>` : `<span class="price-na">—</span>`;
+    const _rsp2 = formatRp(r['Spec+ - 2J 1C']);
+    const hsp2 = _rsp2 !== null ? `<span class="price">${_rsp2}</span>` : `<span class="price-na">—</span>`;
     const ts  = r['Waktu Chat']       ? `<div class="ts">${r['Waktu Chat']}</div>` : '';
 
     // Nama: plain, IG badge di samping nomor hp
@@ -725,6 +756,8 @@ function renderTable() {
       <td>${lokasiHTML(r)}</td>
       <td>${hfp}</td>
       <td>${hsp}</td>
+      <td>${hfp2}</td>
+      <td>${hsp2}</td>
       <td>${ppolaHTML(r)}</td>
       <td><span class="badge ${dn?'b-done':'b-pend'}">${dn?'Sudah':'Belum'}</span>${ts}</td>
       <td>${picCell}</td>
@@ -774,8 +807,10 @@ function renderCards() {
       </div>
       ${links ? `<div class="vc-links">${links}</div>` : ''}
       <div class="vc-grid">
-        <div class="pb"><div class="pb-lbl">Full Print</div><div class="pb-val">${r['Harga Full Print']||'—'}</div></div>
-        <div class="pb"><div class="pb-lbl">Spec+</div><div class="pb-val">${r['Harga Spec +']||'—'}</div></div>
+        <div class="pb"><div class="pb-lbl">Full Print</div><div class="pb-val">${formatRp(r['Harga Full Print'])??'—'}</div></div>
+        <div class="pb"><div class="pb-lbl">Spec+</div><div class="pb-val">${formatRp(r['Harga Spec +'])??'—'}</div></div>
+        <div class="pb"><div class="pb-lbl">FP 2J1C</div><div class="pb-val">${formatRp(r['Full Print - 2J 1C'])??'—'}</div></div>
+        <div class="pb"><div class="pb-lbl">Spec+ 2J1C</div><div class="pb-val">${formatRp(r['Spec+ - 2J 1C'])??'—'}</div></div>
         <div class="pb" style="grid-column:span 2"><div class="pb-lbl">Pecah Pola</div><div class="pb-val" style="font-size:12px">${ppolaHTML(r)}</div></div>
       </div>
       <div style="margin-bottom:4px"><div class="vc-pic-lbl">Nama PIC</div>${pf}</div>
